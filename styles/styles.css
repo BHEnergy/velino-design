@@ -1,0 +1,266 @@
+/*Переменные*/
+:root {
+    --primary-color: #008080;
+    --text-primary: #FFF;
+    --text-subprimary: #CC0000;
+    --btn-background: #fff;
+    --footer-color: #015D5D;
+}
+
+/*Настрйка стилей*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-VariableFont_wght.ttf');
+
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+html, body {
+    height: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a, a:visited {
+    color: var(--text-primary);
+    text-decoration-line: none;
+}
+
+/*Стандартные контейнеры для всего сайта*/
+.wrapper {
+    min-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1200px;
+    border-left: 40px none;
+    border-right: 40px none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+}
+
+.btn.btn--default {
+    padding: 10px 6px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/*Шапка сайта*/
+.menu__upper {
+    background: var(--primary-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-height: 60px;
+}
+
+.menu__down {
+    padding: 10px 0;
+    color: var(--primary-color);
+}
+
+.menu__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.menu__navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    font-size: 10px;
+    color: var(--text-primary);
+}
+
+.menu__navbar ul li, .menu__navbar ul li a {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu__socials {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.menu__info {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu__region::before {
+    content: url(/source/icons/map-marker.png);
+    height: 15px;
+    width: 15px;
+    padding-right: 4px;
+}
+
+.menu__region::after {
+    content: url(/source/icons/arrow.svg);
+    padding-left: 4px;
+}
+
+.menu__schedule::before {
+    content: url(/source/icons/icon-clock.svg);
+    padding-right: 4px;
+}
+
+.menu__phone {
+    font-weight: 700;
+}
+
+.menu__phone::before {
+    content: url(/source/icons/device-phone.svg);
+    padding-right: 4px;
+}
+
+.menu__search::after {
+    content: url(/source/icons/search.svg);
+    padding-left: 4px;
+}
+
+.menu__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu__search input {
+    background: #F3F3F3;
+    height: 30px;
+    min-width: 365px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: text;
+}
+
+.menu__control {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu__panel {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 35px;
+}
+
+.menu__panel img {
+    height: 30px;
+    width: 30px;
+}
+
+.btn.btn--default.menu__call {
+    background-color: var(--btn-background);
+    color: var(--primary-color);
+}
+
+/*Подвал сайта*/
+.footer {
+    padding: 50px 0 30px;
+    background: var(--footer-color);
+    color: #FFF;
+}
+
+.footer__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    margin-bottom: 40px;
+}
+
+.footer__phone {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.footer__socials {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 16px 0;
+}
+
+.btn.btn--default.footer__call {
+    color: var(--primary-color);
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.footer__menu .footer__column:last-child {
+    margin-right: 100px;
+}
+
+.footer__column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 10px;
+}
+
+.footer__column ul li, .footer__column ul li a {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer__column ul li:first-child {
+    padding-top: 25px;
+}
+
+.footer__company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 60px;
+}
+
+.footer__company p:last-child {
+    text-align: end;
+}
+
+/*Главная страница*/
+.js-init-first__banner {
+    height: 100px;
+    margin-top: 30px;
+}
+
