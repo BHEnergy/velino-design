@@ -70,6 +70,31 @@ a, a:visited {
     cursor: pointer;
 }
 
+.stage-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr) );
+    gap: 20px;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.text-medium {
+    font-weight: 700;
+}
+
+.text-medium {
+    font-size: 20px
+}
+
+.text-green {
+    color: var(--primary-color);
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
 /*Шапка сайта*/
 .menu__upper {
     background: var(--primary-color);
@@ -264,3 +289,25 @@ a, a:visited {
     margin-top: 30px;
 }
 
+.info__block {
+    padding: 30px 10px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 15px var(--primary-color);
+}
+
+.info__block.solo-info__block {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info__title {
+    margin: 16px 0;
+    font-size: 16px;
+    color: var(--text-subprimary);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
