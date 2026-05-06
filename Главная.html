@@ -72,33 +72,37 @@
         </div>
     </header>
     <div class = "main">
-        <div class = "container">
             <!-- Первый баннер -->
             <section>
-                    <div class = "swiper js-init-first__banner">
-                        <div class = "swiper-wrapper">
-                            <div class="swiper-slide">
-                                Slide 1
-                            </div>
-                            <div class="swiper-slide">
-                                Slide 2
-                            </div>
-                            <div class="swiper-slide">
-                                Slide 3
-                            </div>
+                <div class = "container">
+                <div class = "swiper js-init-first__banner">
+                    <div class = "swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src = "source/banner-2.png">
                         </div>
-                        <div class = "swiper-pagination first__banner-pagination"></div>
+                        <div class="swiper-slide">
+                            <img src = "source/banner-2.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src = "source/banner-2.png">
+                        </div>
                     </div>
+                    <div class = "swiper-pagination first__banner-pagination"></div>
+                </div>
+                </div>
             </section>
 
-            <section class = "background-section">
+            <section class = "background-section mt-50">
+                <div class = "container">
             <!-- Блоки -->    
-            <h2 class = "title title-square text-medium text-green">Мы — официальный дистрибьютор бренда EMEC в России.<br> Это значит, что вы получаете оборудование напрямую<br> с завода в Италии, без цепочки посредников, но с полной<br> поддержкой на месте:</h2>
+            <h2 class = "title title-triangle text-medium text-green">Мы — официальный дистрибьютор бренда EMEC в России.<br> Это значит, что вы получаете оборудование напрямую<br> с завода в Италии, без цепочки посредников, но с полной<br> поддержкой на месте:</h2>
                 <div class = "info__blocks stage-4 mt-100">
                     <div class = "info__block">
-                        <img class = "info__picture" src = "" >
+                        <div class = "info__picture">
+                            <img src = "/source/italia.png" >
+                        </div>
                         <p class = "info__title">
-                            Прямые поставки из Итали    
+                            Прямые поставки<br> из Итали    
                         </p>
                         <div class = "info__description">
                             <ul>
@@ -109,9 +113,11 @@
                         </div>
                     </div>
                     <div class = "info__block">
-                        <img class = "info__picture" src = "" >
+                        <div class = "info__picture">
+                            <img src = "/source/track.png" >
+                        </div>
                         <p class = "info__title">
-                            Склад в России+ логистика
+                            Склад в России<br> + логистика
                         </p>
                         <div class = "info__description">
                             <ul>
@@ -122,9 +128,11 @@
                         </div>
                     </div>
                     <div class = "info__block">
-                        <img class = "info__picture" src = "" >
+                        <div class = "info__picture">
+                            <img src = "/source/shield-safety.png" >
+                        </div>
                         <p class = "info__title">
-                            Экспертиза и сервис
+                            Экспертиза <br>и сервис
                         </p>
                         <div class = "info__description">
                             <ul>
@@ -134,9 +142,11 @@
                         </div>
                     </div>
                     <div class = "info__block">
-                        <img class = "info__picture" src = "" >
+                        <div class = "info__picture">
+                            <img src = "/source/cloud-upload.png" >
+                        </div>
                         <p class = "info__title">
-                            Облачная платформа Nimbus
+                            Облачная<br> платформа Nimbus
                         </p>
                         <div class = "info__description">
                             <ul>
@@ -150,29 +160,41 @@
                     </div>
                 </div>
                 <div class = "info__block solo-info__block">
-                    <img class = "info__picture" src = "" >
+                    <img class = "info__picture" src = "/source/regards.png" >
                     <p class = "info__title">
                         Эксклюзив в РФ: 
                     </p>
                     <div class = "info__description">
                         Генераторы диоксида хлора серии LOTUS  — единственные доступные решения на хлоритной технологии после ухода европейских производителей.
                     </div>
-                    <button>
+                    <button class = "btn btn--big btn--red">
                         Обсудить задачу с инженером
                     </button>
             </div>
             <!-- Продукция -->
-                <div class = "products__block">
-                    <h2>Продукция</h2>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class = "products__blocks mt-100">
+                    <div class = "products__title">
+                        <h2 class = "title title-triangle text-large">Продукция</h2>
+                    </div>
+                    <div class = "products__block">
+
+                    </div>
+                    <div class = "products__block">
+
+                    </div>
+                    <div class = "products__block">
+
+                    </div>
+                    <div class = "products__block">
+
+                    </div>
+                    <div class = "products__block">
+
+                    </div>
                 </div>
             <!-- Предприятия -->
 
-
+                </div>
             </section>
 
             <!-- Форма -->
@@ -194,10 +216,8 @@
             <section>
 
             </section>
-            Hello world!
-        </div>
     </div>
-    <footer class = "footer">
+    <footer class = "footer mt-75">
         <div class = "container">
             <div class = "footer__body">
                 <div class = "footer__info">
