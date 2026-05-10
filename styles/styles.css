@@ -5,6 +5,7 @@
     --second-primary: #CC0000;
     --btn-background: #fff;
     --footer-color: #015D5D;
+    --shadow--green:  0px 0px 10px 5px rgba(0, 128, 128, 0.2);
 }
 
 /*Настрйка стилей*/
@@ -35,7 +36,7 @@ ul li {
 }
 
 a, a:visited {
-    color: var(--text-primary);
+    color: unset;
     text-decoration-line: none;
 }
 
@@ -62,7 +63,7 @@ a, a:visited {
 
 .background-section {
     background: #349999;
-    background: linear-gradient(180deg,transparent 0%, rgba(52, 153, 153, 1) 25%, rgba(52, 153, 153, 1) 75%, transparent 100%);
+    background: linear-gradient(180deg,transparent 15%, rgba(52, 153, 153, 1) 30%, rgba(52, 153, 153, 1) 75%, transparent 100%);
 }
 
 .btn {
@@ -111,19 +112,28 @@ a, a:visited {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(50%);
+}
+
+.title-triangle.triangle-middle-pos::before {
+    top: 25%;
 }
 
 .text-medium {
     font-weight: 700;
+    font-size: 20px;
 }
 
-.text-medium {
-    font-size: 20px
+.text-large {
+    font-weight: 700;
+    font-size: 36px;
 }
 
 .text-green {
     color: var(--primary-color);
+}
+
+.text-white {
+    color: var(--text-primary);
 }
 
 .mt-50 {
@@ -137,6 +147,45 @@ a, a:visited {
 .mt-100 {
     margin-top: 100px;
 }
+
+ul.check-mark li::before {
+    content: url(/source/icons/check-mark.svg);
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    padding-right: 8px;
+}
+
+.input--default {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 14px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(0, 128, 128, 0.3);
+}
+
+.textarea--default {
+    height: 100px;
+    align-content: start;
+    resize: none;
+}
+
+.checkbox-container--default {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    gap: 15px;
+}
+
+.checkbox--default {
+    height: 15px;
+    width: 15px;
+}
+
 /*Шапка сайта*/
 .menu__upper {
     background: var(--primary-color);
@@ -169,6 +218,9 @@ a, a:visited {
 .menu__navbar ul li, .menu__navbar ul li a {
     font-weight: 600;
     text-transform: uppercase;
+    max-width: 100px;
+    text-align: center;
+    align-content: center;
 }
 
 .menu__socials {
@@ -284,6 +336,7 @@ a, a:visited {
 
 .btn.btn--default.footer__call {
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 .footer__menu {
@@ -294,6 +347,10 @@ a, a:visited {
 
 .footer__menu .footer__column:last-child {
     margin-right: 100px;
+}
+
+.footer__column {
+    padding-top: 40px;
 }
 
 .footer__column ul {
@@ -328,6 +385,37 @@ a, a:visited {
 /*Главная страница*/
 .js-init-first__banner {
     margin-top: 30px;
+}
+
+.first__banner-pagination {
+    margin-top: 20px;
+    position: relative !important;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination-bullet__bar {
+    display: block;
+    height: 5px;
+    width: 50px;
+    background: #D9D9D9;
+}
+
+.pagination-bullet__bar.swiper-pagination-bullet-active {
+    background: rgba(0, 128, 128, 0.5);
+}
+
+.first__banner-pagination .pagination-bullet__bar:first-child,
+.reviews-pagination .pagination-bullet__bar:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.first__banner-pagination .pagination-bullet__bar:last-child,
+.reviews-pagination .pagination-bullet__bar:last-child {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .info__block {
@@ -394,7 +482,325 @@ a, a:visited {
     height: 150px;
 }
 
+/*Подумать над картинкой, как она должна быть в центре у логотипа*/
+
 .products__block {
-    background: #fff;
+    background: url(/source/icons/logo-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 15px 0;
     border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px 0 50px;
+    gap: 75px;
+}
+
+.products__title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--second-primary);
+}
+
+/* Подумать над картой и её местоположением */
+
+.map__section {
+    background: url(/source/map-russia.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-color: #FFF;
+    border-radius: 10px;
+    height: 100%;
+    padding: 90px 40px 85px 55px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 110px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 128, 128, 0.2);
+}
+
+.map-info__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--second-primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.map-info__title::before {
+    content: url(/source/icons/triangle-medium.svg);
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.map-info__description {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+/*Форма обратной связи*/
+.form-body__engineer {
+    max-height: 484px;
+    background: linear-gradient(90deg, rgba(0, 128, 128, 0.8) 0%, rgba(0, 128, 128, 0.2) 80%);
+    border-radius: 10px;
+    box-shadow: var(--shadow--green);
+    padding: 80px 0px 70px 60px;
+    position: relative;
+}
+
+.form-engineer__body {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    color: #FFF;
+    font-size: 14px;
+    max-width: 650px;
+
+    & ul li {
+        font-weight: 700;
+    }
+}
+
+.form-engineer__form {
+    display: grid;
+    grid-template: 'A A B C' 'D D D D';
+    gap: 6px 15px;
+
+    & input:first-child {
+        grid-area: A;
+    }
+
+    & input:nth-child(2) {
+        grid-area: B;
+    }
+
+    & button {
+        grid-area: C;
+    }
+
+    & div.checkbox-container--default {
+        grid-area: D;
+        max-width: 355px;
+    }
+}
+
+.form-engineer__picture {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.series__block {
+    background: url(/source/icons/logo-bg.png);
+    background-color: #fff;
+    background-position: center 20px;
+    background-repeat: no-repeat;
+    padding: 10px 35px;
+    border-radius: 10px;
+    box-shadow: var(--shadow--green);
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.series__name {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--second-primary);
+    margin-top: 40px;
+    width: 100%;
+}
+
+.series__description {
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+}
+
+.sales__block {
+    position: relative;
+    background-color: #fff;
+    padding: 20px 35px;
+    border-radius: 10px;
+    box-shadow: var(--shadow--green);
+    width: 100%;
+    height: 100%;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        gap: 10px;
+}
+
+.sales__picture {
+    max-height: 170px;
+    max-width: 170px;
+    height: 100%;
+    width: 100%;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.sales__sticker {
+    background: var(--second-primary);
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    color: #FFF;
+}
+
+.sales__name {
+    width: 100%;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sales__price {
+    width: 100%;
+    font-size: 16px;
+    color: var(--second-primary);
+    font-weight: 700;
+}
+
+.sales__button {
+    color: white;
+    background: var(--primary-color);
+    box-shadow: var(--shadow--green);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-review__container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 65% 35%;
+}
+
+.form-problem__block {
+    background: #FFF;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow--green);
+    max-height: 420px;
+    position: relative;
+}
+
+.form-problem__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+    max-width: 375px;
+}
+
+.form-problem__container {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-problem__picture {
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+}
+
+.js-init-review-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.js-init-review-slider .swiper-slide {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 40px 30px 40px 40px;
+    box-shadow: var(--shadow--green);
+    max-height: 375px;
+}
+
+.reviews-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.review-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-info__company {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review-info__logo {
+    height: 70px;
+    width: 70px;
+}
+
+.review-info__name {
+    color: var(--second-primary);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.review-info__description {
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.review-info__link {
+    margin-top: auto;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: end;
+}
+
+
+/*Медиа-запросы*/
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .form-body__engineer {
+        max-height: 570px;
+    }
+
+    .form-engineer__body {
+        max-width: 750px;
+    }
 }

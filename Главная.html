@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/styles/styles.css" rel="stylesheet" >
+    <link href="/styles/styles.css?v=1.1" rel="stylesheet" >
     <link href="/styles/swiper.css" rel="stylesheet">
     <link href="/styles/swiper.min.css" rel="stylesheet">
     <script src = "/scripts/script.js" type="text/javascript"></script>
     <script src = "/scripts/swiper.js" type="text/javascript"></script>
     <script src = "/scripts/swiper.min.js" type="text/javascript"></script>
     <script src = "/scripts/swiper-bundle.min.js" type="text/javascript"></script>
+    <script src = "/scripts/mask.js" type="text/javascript"></script>
     <title>Главная страница</title>
 </head>
 <body>
@@ -93,9 +94,9 @@
             </section>
 
             <section class = "background-section mt-50">
-                <div class = "container">
+            <div class = "container">
             <!-- Блоки -->    
-            <h2 class = "title title-triangle text-medium text-green">Мы — официальный дистрибьютор бренда EMEC в России.<br> Это значит, что вы получаете оборудование напрямую<br> с завода в Италии, без цепочки посредников, но с полной<br> поддержкой на месте:</h2>
+            <h2 class = "title title-triangle triangle-middle-pos text-medium text-green">Мы — официальный дистрибьютор бренда EMEC в России.<br> Это значит, что вы получаете оборудование напрямую<br> с завода в Италии, без цепочки посредников, но с полной<br> поддержкой на месте:</h2>
                 <div class = "info__blocks stage-4 mt-100">
                     <div class = "info__block">
                         <div class = "info__picture">
@@ -173,48 +174,283 @@
             </div>
             <!-- Продукция -->
                 <div class = "products__blocks mt-100">
-                    <div class = "products__title">
-                        <h2 class = "title title-triangle text-large">Продукция</h2>
+                    <div class = "product__title">
+                        <h2 class = "title title-triangle text-large text-white">Продукция</h2>
                     </div>
-                    <div class = "products__block">
-
-                    </div>
-                    <div class = "products__block">
-
-                    </div>
-                    <div class = "products__block">
-
-                    </div>
-                    <div class = "products__block">
-
-                    </div>
-                    <div class = "products__block">
-
-                    </div>
+                    <a href = "#">
+                        <div class = "products__block">
+                            <img class = "probucts__picture" src = "/source/equipment-1.png">
+                            <p class = "products__title">Системы дизенфекции</p>
+                        </div>
+                    </a>
+                    <a href = "#">
+                        <div class = "products__block">
+                            <img class = "probucts__picture" src = "/source/equipment-2.png">
+                            <p class = "products__title">Дозирующие электромагнитные насосы</p>
+                        </div>
+                    </a>
+                    <a href = "#">
+                        <div class = "products__block">
+                            <img class = "probucts__picture" src = "/source/equipment-3.png">
+                            <p class = "products__title">Дозирующие насосы с приводом</p>
+                        </div>
+                    </a>
+                    <a href = "#">
+                        <div class = "products__block">
+                            <img class = "probucts__picture" src = "/source/equipment-4.png">
+                            <p class = "products__title">контроллеры и Датчики</p>
+                        </div>
+                    </a>
+                    <a href = "#">
+                        <div class = "products__block">
+                            <img class = "probucts__picture" src = "/source/equipment-5.png">
+                            <p class = "products__title">Шаговые дозирующие насосы</p>
+                        </div>
+                    </a>
                 </div>
             <!-- Предприятия -->
-
+                <h2 class = "title title-triangle text-medium text-white mt-100">
+                    Работаем с предприятиями и инфраструктурными<br> объектами по всей России
+                </h2>
+                <div class = "map__section mt-100">
+                    <div class="map-info">
+                        <p class="map-info__title">
+                            Водоподготовка и очистка
+                        </p>
+                        <p class="map-info__description">
+                            Дозирование реагентов, дезинфекция воды и контроль параметров в системах водоподготовки, бассейнах и очистных сооружениях. Обеспечиваем стабильное качество воды и снижение расхода химии.
+                        </p>
+                    </div>
+                    <div class="map-info">
+                        <p class="map-info__title">
+                            Пищевая промышленность
+                        </p>
+                        <p class="map-info__description">
+                            Решения для молочных производств, пивоварен и консервных заводов. Контроль концентрации реагентов, дезинфекция оборудования и соблюдение санитарных норм.
+                        </p>
+                    </div>
+                    <div class="map-info">
+                        <p class="map-info__title">
+                            Промышленность и химия
+                        </p>
+                        <p class="map-info__description">
+                            Точное дозирование химических компонентов в производственных процессах. Подходит для химических предприятий, лакокрасочных производств и ЦБК.
+                        </p>
+                    </div>
+                    <div class="map-info">
+                        <p class="map-info__title">
+                            Агросектор
+                        </p>
+                        <p class="map-info__description">
+                            Системы дозирования и обработки воды для сельского хозяйства. Повышение эффективности орошения и контроль качества воды.
+                        </p>
+                    </div>
+                    <div class="map-info">
+                        <p class="map-info__title">
+                            Энергетика
+                        </p>
+                        <p class="map-info__description">
+                            Подготовка и обработка воды для энергетических объектов. Защита оборудования от коррозии и стабильная работа систем.
+                        </p>
+                    </div>
+                    <div class="map-info">
+                        <button class = "btn btn--big btn--red">
+                            Подобрать решение под вашу задачу
+                        </button>
+                    </div>
                 </div>
+            </div>
             </section>
 
             <!-- Форма -->
-            <section>
+            <section class = "container mt-100">
+                <div class = "form-body__engineer">
+                    <div class = "form-engineer__body">
+                        <h2 class = "title text-large text-white">Получите доступ<br> к закрытой базе<br> для партнёров:</h2>
+ 
+                        <div class = "form-engineer__body">
+                            <ul class = "check-mark">
+                                <li>3D-модели для проектирования</li>
+                                <li>Актуальные прайсы и коммерческие условия</li>
+                                <li>Техническая поддержка и консультации</li>
+                            </ul>
+                        </div>
 
+                        <form class = "form-engineer__form" action="/" method="POST">
+                            <input class = "input--default" type="text" placeholder="ИМЯ">
+                            <!-- 
+                            #TODO: Библиотека phonemask
+                            -->
+                            <input class = "input--default" type="text" >
+                            <button class = "btn btn--big btn--red">Стать дилером</button>
+                            <div class = "checkbox-container--default">
+                                <input class = "checkbox--default" type="checkbox">
+                                <label>Я ознакомлен с политикой обработки персональных данных и даю согласие на обработку моих персональных данных</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class = "form-engineer__picture">
+                        <img src = "/source/enginer-1.png">
+                    </div>
+                </div>
             </section>
 
             <!-- Популярные серии -->
-            <section>
-
-            </section>
-
+            <section class = "background-section mt-100">
+            <div class = "container">
+                <h2 class = "title title-triangle text-large text-green">Популярные серии</h2>
+                <div class = "series__section stage-4 mt-100">
+                    <a class="series__block" href = "#">
+                        <div class = "series__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "series__name">LOTUS</p>
+                        <p class = "series__description"></p>
+                    </a>
+                    <a class="series__block" href = "#">
+                        <div class = "series__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "series__name">PRISMA</p>
+                        <p class = "series__description"></p>
+                    </a>
+                    <a class="series__block" href = "#">
+                        <div class = "series__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "series__name">WNPHXX</p>
+                        <p class = "series__description">Дозирующие насосы с шаговым двигателем</p>
+                    </a>
+                    <a class="series__block" href = "#">
+                        <div class = "series__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "series__name">PRIUS</p>
+                        <p class = "series__description"></p>
+                    </a>
+                </div>
             <!-- Акции -->
-            <section>
-
-            </section>
-
+                <h2 class = "title title-triangle text-large text-white mt-100">Акции</h2>
+                <div class = "series__section stage-4 mt-100">
+                    <a class="sales__block" href = "#">
+                        <div class = "sales__sticker">
+                            Новинка
+                        </div>
+                        <div class = "sales__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "sales__name">товар товар</p>
+                        <p class = "sales__price">ЦЕНА ₽</p>
+                        <button class = "sales__button">
+                            В корзину
+                        </button>
+                    </a>
+                    <a class="sales__block" href = "#">
+                        <div class = "sales__sticker">
+                            Новинка
+                        </div>
+                        <div class = "sales__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "sales__name">товар товар</p>
+                        <p class = "sales__price">ЦЕНА ₽</p>
+                        <button class = "sales__button">
+                            В корзину
+                        </button>
+                    </a>
+                    <a class="sales__block" href = "#">
+                        <div class = "sales__sticker">
+                            Новинка
+                        </div>
+                        <div class = "sales__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "sales__name">товар товар</p>
+                        <p class = "sales__price">ЦЕНА ₽</p>
+                        <button class = "sales__button">
+                            В корзину
+                        </button>
+                    </a>
+                    <a class="sales__block" href = "#">
+                        <div class = "sales__sticker">
+                            Новинка
+                        </div>
+                        <div class = "sales__picture">
+                            <img src = "/source/equipment-3.png">
+                        </div>
+                        <p class = "sales__name">товар товар</p>
+                        <p class = "sales__price">ЦЕНА ₽</p>
+                        <button class = "sales__button">
+                            В корзину
+                        </button>
+                    </a>
+                </div>
             <!-- Форма и слайдер -->
-            <section>
-
+                <h2 class = "title title-triangle triangle-middle-pos text-large text-white mt-100">Не знаете, с чего начать?<br>Инженер подберет решение за 2 часа!</h2>
+                <div class = "form-review__container mt-75">
+                    <div class = "form-problem__block">
+                        <p class = "form-problem__title">Заполните форму и наши сотрудники свяжутся с Вами в ближайшее время</p>
+                        <form class = "form-problem__container">
+                            <input class = "input--default" type="text" placeholder="ИМЯ">
+                            <input class = "input--default" type="text" placeholder="">
+                            <textarea class = "input--default textarea--default" type="textarea" placeholder="ЗАДАЧА"></textarea>
+                            <div class = "checkbox-container--default">
+                                <input class = "checkbox--default" type="checkbox">
+                                <label>Я ознакомлен с политикой обработки персональных данных и даю согласие на обработку моих персональных данных</label>
+                            </div>
+                            <button class = "btn btn--big btn--red">Отправить</button>
+                        </form>
+                        <img class = "form-problem__picture" src = "/source/enginer-2.png">
+                    </div>
+                    <div class = "swiper js-init-review-slider">
+                        <div class = "swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class = "review-info">
+                                    <div class = "review-info__company">
+                                        <img class = "review-info__logo" src = "/source/icons/logo-bg.png">
+                                        <p class = "review-info__name">ООО "СтройМаш"</p>
+                                    </div>
+                                    <div class = "review-info__description">
+                                        "Заказывали партию промышленных насосов для нового цеха. Оборудование работает без нареканий уже полгода. Спасибо за оперативность. Заказывали партию промышленных насосов для нового цеха. Оборудование работает без нареканий уже полгода. Спасибо за оперативность"
+                                    </div>
+                                    <a class = "review-info__link" href = "#">
+                                        Просмотреть весь отзыв
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class = "review-info">
+                                    <div class = "review-info__company">
+                                        <img class = "review-info__logo" src = "/source/icons/logo-bg.png">
+                                        <p class = "review-info__name">ООО "СтройМаш"</p>
+                                    </div>
+                                    <div class = "review-info__description">
+                                        "Заказывали партию промышленных насосов для нового цеха. Оборудование работает без нареканий уже полгода. Спасибо за оперативность. Заказывали партию промышленных насосов для нового цеха. Оборудование работает без нареканий уже полгода. Спасибо за оперативность"
+                                    </div>
+                                    <a class = "review-info__link" href = "#">
+                                        Просмотреть весь отзыв
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class = "review-info">
+                                    <div class = "review-info__company">
+                                        <img class = "review-info__logo" src = "/source/icons/logo-bg.png">
+                                        <p class = "review-info__name">ООО "СтройМаш"</p>
+                                    </div>
+                                    <div class = "review-info__description">
+                                        "Заказывали партию промышленных насосов для нового цеха. Оборудование работает без нареканий уже полгода. Спасибо за оперативность. Заказывали партию промышленных насосов для нового цеха. Оборудование работает без нареканий уже полгода. Спасибо за оперативность"
+                                    </div>
+                                    <a class = "review-info__link" href = "#">
+                                        Просмотреть весь отзыв
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "swiper-pagination reviews-pagination"></div>
+                    </div>
+                </div>
+            </div>
             </section>
     </div>
     <footer class = "footer mt-75">
