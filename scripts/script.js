@@ -33,6 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.reviews-pagination',
             type: 'bullets',
             bulletClass: 'pagination-bullet__bar'
-        }
+        },
+        navigation: {
+            nextEl: '.reviews-control-next',
+            prevEl: '.reviews-control-prev',
+        },
     });
+
+    IMask(
+        document.querySelectorAll('[name="phone"]'),
+        {
+            mask: '+{7} (000) 000-00-00'
+        } 
+    );
 })

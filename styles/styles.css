@@ -71,6 +71,8 @@ a, a:visited {
     border: none;
     font-weight: 700;
     cursor: pointer;
+    text-align: center;
+    align-content: center;
 }
 
 .btn--default {
@@ -88,6 +90,14 @@ a, a:visited {
     background: var(--second-primary);
     box-shadow: 0px 5px 5px rgba(204, 0, 0, 0.2);
     color: #FFF;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.btn--white {
+    background: #FFF;
+    box-shadow: var(--shadow--green);
+    color: var(--primary-color);
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
@@ -223,6 +233,21 @@ ul.check-mark li::before {
     align-content: center;
 }
 
+.menu__navbar ul li.current-position {
+    position: relative;
+}
+
+.menu__navbar ul li.current-position::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: #CC0000;
+    position: absolute;
+    bottom: -16px;
+    left: 0px;
+}
+
 .menu__socials {
     display: flex;
     flex-direction: row;
@@ -353,6 +378,12 @@ ul.check-mark li::before {
     padding-top: 40px;
 }
 
+.footer__separator {
+    height: 5px;
+    width: 70px;
+    background: #CC0000;
+}
+
 .footer__column ul {
     display: flex;
     flex-direction: column;
@@ -385,6 +416,26 @@ ul.check-mark li::before {
 /*Главная страница*/
 .js-init-first__banner {
     margin-top: 30px;
+}
+
+.slide__banner {
+    position: relative;
+}
+
+.slide__banner img {
+    width: 100%;
+}
+
+.slide__links {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    & :last-child {
+        margin-left: 25px;
+    }
 }
 
 .first__banner-pagination {
@@ -461,6 +512,8 @@ ul.check-mark li::before {
 .solo-info__block .info__title {
     font-size: 20px;
     text-align: start;
+    margin-left: 25px;
+    margin-right: 45px;
 }
 
 .solo-info__block .info__description {
@@ -485,6 +538,7 @@ ul.check-mark li::before {
 /*Подумать над картинкой, как она должна быть в центре у логотипа*/
 
 .products__block {
+    position: relative;
     background: url(/source/icons/logo-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -499,6 +553,11 @@ ul.check-mark li::before {
 }
 
 .products__title {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 290px;
+    align-content: center;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -511,7 +570,7 @@ ul.check-mark li::before {
     background: url(/source/map-russia.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 center;
+    background-position: -75px center;
     background-color: #FFF;
     border-radius: 10px;
     height: 100%;
@@ -520,6 +579,14 @@ ul.check-mark li::before {
     grid-template-columns: repeat(3, minmax(100px, 1fr));
     gap: 110px;
     box-shadow: 0px 0px 10px 5px rgba(0, 128, 128, 0.2);
+}
+
+.map-info {
+    padding-left: 20px;
+}
+
+.map-info:last-child {
+    align-self: flex-end;
 }
 
 .map-info__title {
@@ -534,8 +601,8 @@ ul.check-mark li::before {
 .map-info__title::before {
     content: url(/source/icons/triangle-medium.svg);
     position: absolute;
-    top: 15px;
-    left: 0;
+    top: 0px;
+    left: -20px;
 }
 
 .map-info__description {
@@ -547,11 +614,14 @@ ul.check-mark li::before {
 /*Форма обратной связи*/
 .form-body__engineer {
     max-height: 484px;
-    background: linear-gradient(90deg, rgba(0, 128, 128, 0.8) 0%, rgba(0, 128, 128, 0.2) 80%);
+    background: linear-gradient(90deg, rgba(0, 128, 128, 0.8) 0%, rgba(0, 128, 128, 0.2) 80%), url(/source/icons/Logo-bg-gray.png);
     border-radius: 10px;
     box-shadow: var(--shadow--green);
     padding: 80px 0px 70px 60px;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 .form-engineer__body {
@@ -697,7 +767,8 @@ ul.check-mark li::before {
 .form-review__container {
     display: grid;
     gap: 20px;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 1fr 35%;
+    position: relative;
 }
 
 .form-problem__block {
@@ -741,6 +812,26 @@ ul.check-mark li::before {
     padding: 40px 30px 40px 40px;
     box-shadow: var(--shadow--green);
     max-height: 375px;
+}
+
+.reviews-control {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.reviews-control-next {
+    content: url(/source/icons/Triangle.png);
+    cursor: pointer;
+}
+
+.reviews-control-prev {
+    content: url(/source/icons/Triangle.png);
+    transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .reviews-pagination {
@@ -796,11 +887,86 @@ ul.check-mark li::before {
         max-width: 1440px;
     }
 
+    .text-medium {
+        font-size: 24px;
+    }
+
+    .text-large {
+        font-size: 40px;
+    }
+
+    .info__title {
+        font-size: 16px;
+    }
+
+    .info__description {
+        font-size: 14px;
+    }
+
     .form-body__engineer {
         max-height: 570px;
     }
 
     .form-engineer__body {
         max-width: 750px;
+    }
+
+    .map__section {
+        min-height: 658px;
+    }
+    
+    .form-problem__container {
+        max-width: 445px;
+    }
+
+    .series__block {
+        min-height: 320px;
+    }
+
+    .series__name {
+        font-size: 18px;
+    }
+
+    .series__description {
+        font-size: 14px;
+    }
+
+    .sales__block {
+        min-height: 450px;
+    }
+
+    .sales__picture {
+        max-height: 240px;
+        max-width: 240px;
+    }
+
+    .sales__sticker {
+        font-size: 18px;
+    }
+
+    .form-problem__block {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stage-4 {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .menu__navbar {
+        display: none;
+    }
+
+    .menu__schedule {
+        display: none;
+    }
+
+    .menu__phone {
+        display: none;
+    }
+
+    .footer__menu {
+        display: none;
     }
 }

@@ -21,7 +21,7 @@
                 <img class = "menu__logo" src = "/source/logo.png">
                 <div class = "menu__navbar">
                     <ul>
-                        <li>
+                        <li class = "current-position">
                             <a href = "#">Каталог</a>
                         </li>
                         <li>О компании</li>
@@ -79,13 +79,43 @@
                 <div class = "swiper js-init-first__banner">
                     <div class = "swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src = "source/banner-2.png">
+                            <div class = "slide__banner">
+                                <img src = "source/banner-2.png">
+                                <div class = "slide__links">
+                                    <button class = "btn btn--big btn--red">
+                                        Подобрать оборудование
+                                    </button>
+                                    <a href = "#" class = "btn btn--big btn--white">
+                                        Смотреть каталог
+                                    </a>
+                                </div>    
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src = "source/banner-2.png">
+                            <div class = "slide__banner">
+                                <img src = "source/banner-2.png">
+                                <div class = "slide__links">
+                                    <button class = "btn btn--big btn--red">
+                                        Подобрать оборудование
+                                    </button>
+                                    <a href = "#" class = "btn btn--big btn--white">
+                                        Смотреть каталог
+                                    </a>
+                                </div>    
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src = "source/banner-2.png">
+                            <div class = "slide__banner">
+                                <img src = "source/banner-2.png">
+                                <div class = "slide__links">
+                                    <button class = "btn btn--big btn--red">
+                                        Подобрать оборудование
+                                    </button>
+                                    <a href = "#" class = "btn btn--big btn--white">
+                                        Смотреть каталог
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class = "swiper-pagination first__banner-pagination"></div>
@@ -186,13 +216,13 @@
                     <a href = "#">
                         <div class = "products__block">
                             <img class = "probucts__picture" src = "/source/equipment-2.png">
-                            <p class = "products__title">Дозирующие электромагнитные насосы</p>
+                            <p class = "products__title">Дозирующие<br> электромагнитные насосы</p>
                         </div>
                     </a>
                     <a href = "#">
                         <div class = "products__block">
                             <img class = "probucts__picture" src = "/source/equipment-3.png">
-                            <p class = "products__title">Дозирующие насосы с приводом</p>
+                            <p class = "products__title">Дозирующие насосы<br> с приводом</p>
                         </div>
                     </a>
                     <a href = "#">
@@ -204,7 +234,7 @@
                     <a href = "#">
                         <div class = "products__block">
                             <img class = "probucts__picture" src = "/source/equipment-5.png">
-                            <p class = "products__title">Шаговые дозирующие насосы</p>
+                            <p class = "products__title">Шаговые дозирующие<br> насосы</p>
                         </div>
                     </a>
                 </div>
@@ -215,7 +245,7 @@
                 <div class = "map__section mt-100">
                     <div class="map-info">
                         <p class="map-info__title">
-                            Водоподготовка и очистка
+                            Водоподготовка<br> и очистка
                         </p>
                         <p class="map-info__description">
                             Дозирование реагентов, дезинфекция воды и контроль параметров в системах водоподготовки, бассейнах и очистных сооружениях. Обеспечиваем стабильное качество воды и снижение расхода химии.
@@ -223,7 +253,7 @@
                     </div>
                     <div class="map-info">
                         <p class="map-info__title">
-                            Пищевая промышленность
+                            Пищевая<br> промышленность
                         </p>
                         <p class="map-info__description">
                             Решения для молочных производств, пивоварен и консервных заводов. Контроль концентрации реагентов, дезинфекция оборудования и соблюдение санитарных норм.
@@ -231,7 +261,7 @@
                     </div>
                     <div class="map-info">
                         <p class="map-info__title">
-                            Промышленность и химия
+                            Промышленность<br> и химия
                         </p>
                         <p class="map-info__description">
                             Точное дозирование химических компонентов в производственных процессах. Подходит для химических предприятий, лакокрасочных производств и ЦБК.
@@ -281,7 +311,7 @@
                             <!-- 
                             #TODO: Библиотека phonemask
                             -->
-                            <input class = "input--default" type="text" >
+                            <input class = "input--default" name = "phone" type="text" >
                             <button class = "btn btn--big btn--red">Стать дилером</button>
                             <div class = "checkbox-container--default">
                                 <input class = "checkbox--default" type="checkbox">
@@ -449,6 +479,10 @@
                         </div>
                         <div class = "swiper-pagination reviews-pagination"></div>
                     </div>
+                    <div class = "reviews-control">
+                        <div class="reviews-control-prev"></div>
+                        <div class="reviews-control-next"></div>
+                    </div>
                 </div>
             </div>
             </section>
@@ -472,6 +506,7 @@
                 </div>
                 <div class = "footer__menu">
                     <div class = "footer__column">
+                        <div class = "footer__separator"></div>
                         <ul>
                             <li>Каталог</li>
                             <li>Акции</li>
@@ -481,6 +516,7 @@
                         </ul>
                     </div>
                     <div class = "footer__column">
+                        <div class = "footer__separator"></div>
                         <ul>
                             <li>Новости</li>
                             <li>Статьи</li>
@@ -489,6 +525,7 @@
                         </ul>
                     </div>
                     <div class = "footer__column">
+                        <div class = "footer__separator"></div>
                         <ul>
                             <li>О компании</li>
                             <li>Вакансии</li>
