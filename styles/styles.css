@@ -36,8 +36,16 @@ ul li {
 }
 
 a, a:visited {
-    color: unset;
+    color: inherit;
     text-decoration-line: none;
+}
+
+input[type="checkbox"] {
+    max-height: 15px;
+    max-width: 15px;
+    width: 100%;
+    border: 1px solid #fff;
+    appearance: none;
 }
 
 /*Стандартные контейнеры для всего сайта*/
@@ -76,7 +84,7 @@ a, a:visited {
 }
 
 .btn--default {
-    padding: 10px 6px;
+    padding: 10px 20px;
     font-size: 10px;
 }
 
@@ -187,6 +195,7 @@ ul.check-mark li::before {
 .checkbox-container--default {
     display: flex;
     flex-direction: row;
+    align-items: center;
     font-size: 10px;
     gap: 15px;
 }
@@ -215,6 +224,7 @@ ul.check-mark li::before {
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
+    min-height: 60px;
 }
 
 .menu__navbar ul {
@@ -328,6 +338,7 @@ ul.check-mark li::before {
 .btn.btn--default.menu__call {
     background-color: var(--btn-background);
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 /*Подвал сайта*/
@@ -350,6 +361,10 @@ ul.check-mark li::before {
 .footer__phone {
     font-size: 12px;
     font-weight: 800;
+}
+
+.footer__phone::before {
+    content: url(/source/icons/device-phone-white.svg);
 }
 
 .footer__socials {
@@ -407,6 +422,10 @@ ul.check-mark li::before {
     font-size: 10px;
     font-weight: 400;
     margin-top: 60px;
+}
+
+.footer__company p {
+    color: #D9D9D9;   
 }
 
 .footer__company p:last-child {
@@ -582,7 +601,7 @@ ul.check-mark li::before {
 }
 
 .map-info {
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 .map-info:last-child {
@@ -596,13 +615,15 @@ ul.check-mark li::before {
     margin-bottom: 10px;
     text-transform: uppercase;
     position: relative;
+    min-height: 48px;
+    align-content: center;
 }
 
 .map-info__title::before {
     content: url(/source/icons/triangle-medium.svg);
     position: absolute;
-    top: 0px;
-    left: -20px;
+    top: 10px;
+    left: -25px;
 }
 
 .map-info__description {
@@ -614,7 +635,7 @@ ul.check-mark li::before {
 /*Форма обратной связи*/
 .form-body__engineer {
     max-height: 484px;
-    background: linear-gradient(90deg, rgba(0, 128, 128, 0.8) 0%, rgba(0, 128, 128, 0.2) 80%), url(/source/icons/Logo-bg-gray.png);
+    background: url(/source/icons/Logo-bg-gray.png), linear-gradient(90deg, rgba(0, 128, 128, 0.8) 0%, rgba(0, 128, 128, 0.2) 80%);
     border-radius: 10px;
     box-shadow: var(--shadow--green);
     padding: 80px 0px 70px 60px;
@@ -694,6 +715,7 @@ ul.check-mark li::before {
     font-size: 12px;
     font-weight: 400;
     color: black;
+    min-height: 40px;
 }
 
 .sales__block {
@@ -709,7 +731,7 @@ ul.check-mark li::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-        gap: 10px;
+    gap: 10px;
 }
 
 .sales__picture {
@@ -717,6 +739,7 @@ ul.check-mark li::before {
     max-width: 170px;
     height: 100%;
     width: 100%;
+    margin: auto 0;
 
     & img {
         width: 100%;
@@ -755,6 +778,7 @@ ul.check-mark li::before {
     color: white;
     background: var(--primary-color);
     box-shadow: var(--shadow--green);
+    margin-top: 20px;
     font-size: 14px;
     font-weight: 700;
     padding: 10px 30px;
@@ -793,6 +817,10 @@ ul.check-mark li::before {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    & div.checkbox-container--default input {
+        border-color: #7E7E7E;
+    }
 }
 
 .form-problem__picture {
@@ -947,15 +975,177 @@ ul.check-mark li::before {
     .form-problem__block {
         max-height: 500px;
     }
+
+    .footer__company p {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .text-large {
+        font-size: 26px;
+    }
+
     .stage-4 {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 15px;
+    }
+
+    .input--default, .checkbox-container--default {
+        max-width: 220px;
     }
 
     .menu__navbar {
         display: none;
+    }
+
+    .menu__control {
+        display: none;
+    }
+
+    .js-init-first__banner {
+        width: calc(100% + 30px);
+        left: -15px;
+    }
+
+    .pagination-bullet__bar {
+        width: 25px;
+    }
+
+    .info__block.solo-info__block {
+        flex-direction: column;
+        position: relative;
+        padding: 40px 30px;
+    }
+
+    .info__block {
+        padding: 25px 5px 30px 5px;
+    }
+
+    .info__title {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .info__picture {
+        height: 60px;
+        width: 60px;
+    }
+
+    .info__description {
+        font-size: 10px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .solo-info__block .info__title {
+        margin: 0;
+        margin-bottom: 12px;
+    }
+
+    .solo-info__block .info__description {
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .solo-info__block .info__picture {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .products__blocks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products__blocks .product__title {
+        height: 60px;
+    }
+
+    .products__blocks .products__block {
+        height: 110px;
+    }
+
+    .products__block {
+        gap: 0;
+        padding: 0 20px 0 30px;
+        background-size: 35%;
+        background-position: 10px center;
+        justify-content: space-between;
+    }
+
+    .probucts__picture {
+        height: 75px;
+        width: 75px;
+    }
+
+    .products__title {
+        position: relative;
+        left: unset;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .map__section {
+        display: flex;
+        flex-direction: column;
+        background-size: contain;
+        background-position: center 25px;
+        padding: 80px 15px 45px 15px;
+        gap: 30px;
+    }
+
+    .map-info__title {
+        text-align: center;
+    }
+
+    .map-info__description {
+        text-align: center;
+    }
+
+    .form-body__engineer {
+        max-height: unset;
+        padding: 40px 10px 45px;
+        background-size: 50%, cover;
+        background-position: 100% 95%, top;
+    }
+
+    .form-engineer__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & button {
+            max-width: 220px;
+        }
+
+        & div.checkbox-container--default {
+            max-width: 220px;
+            margin: 10px 0;
+            font-size: 8px;
+        }
+    }
+
+    .form-engineer__body {
+        text-align: center;
+    }
+
+    .form-engineer__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-engineer__picture {
+        max-width: 40%;
     }
 
     .menu__schedule {
@@ -966,7 +1156,97 @@ ul.check-mark li::before {
         display: none;
     }
 
+    .menu__socials {
+        display: none;
+    }
+
+    .menu__call {
+        display: none;
+    }
+
+    .sales__block {
+        min-height: 275px;
+        padding: 15px;
+    }
+
+    .sales__name, .sales__price {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .sales__sticker {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .sales__button {
+        padding: 7px 20px;
+    }
+
+    .series__block {
+        min-height: unset;
+        padding: 30px 10px 20px;
+        max-height: 200px;
+        background-size: 75%;
+    }
+
+    .series__picture {
+        height: 100px;
+        width: 100px;
+    }
+
+    .series__name {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .series__description {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .form-review__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .reviews-control {
+        position: relative;
+        top: 0;
+        justify-content: center;
+    }
+
     .footer__menu {
         display: none;
+    }
+
+    .footer__socials {
+        justify-content: center;
+    }
+
+    .footer__phone {
+        text-align: center;
+    }
+
+    .footer__body {
+        justify-content: center;
+    }
+
+    .footer__company {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer__button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer__company p, .footer__company p:last-child {
+        font-size: 8px;
+        text-align: center;
     }
 }

@@ -80,7 +80,7 @@
                     <div class = "swiper-wrapper">
                         <div class="swiper-slide">
                             <div class = "slide__banner">
-                                <img src = "source/banner-2.png">
+                                <img class = "slide__picture has-mobile-pic" src = "/source/banner-2.png" data-mobile="/source/banner-mobile-2.png">
                                 <div class = "slide__links">
                                     <button class = "btn btn--big btn--red">
                                         Подобрать оборудование
@@ -93,7 +93,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class = "slide__banner">
-                                <img src = "source/banner-2.png">
+                                <img class = "slide__picture has-mobile-pic" src = "/source/banner-2.png" data-mobile="/source/banner-mobile-2.png">
                                 <div class = "slide__links">
                                     <button class = "btn btn--big btn--red">
                                         Подобрать оборудование
@@ -106,7 +106,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class = "slide__banner">
-                                <img src = "source/banner-2.png">
+                                <img class = "slide__picture has-mobile-pic" src = "/source/banner-2.png" data-mobile="/source/banner-mobile-2.png">
                                 <div class = "slide__links">
                                     <button class = "btn btn--big btn--red">
                                         Подобрать оборудование
@@ -308,15 +308,12 @@
 
                         <form class = "form-engineer__form" action="/" method="POST">
                             <input class = "input--default" type="text" placeholder="ИМЯ">
-                            <!-- 
-                            #TODO: Библиотека phonemask
-                            -->
-                            <input class = "input--default" name = "phone" type="text" >
-                            <button class = "btn btn--big btn--red">Стать дилером</button>
+                            <input class = "input--default" name = "phone" type="text" placeholder="+7 (___) ___-__-__">
                             <div class = "checkbox-container--default">
                                 <input class = "checkbox--default" type="checkbox">
                                 <label>Я ознакомлен с политикой обработки персональных данных и даю согласие на обработку моих персональных данных</label>
                             </div>
+                            <button class = "btn btn--big btn--red">Стать дилером</button>
                         </form>
                     </div>
                     <div class = "form-engineer__picture">
@@ -371,9 +368,9 @@
                         </div>
                         <p class = "sales__name">товар товар</p>
                         <p class = "sales__price">ЦЕНА ₽</p>
-                        <button class = "sales__button">
-                            В корзину
-                        </button>
+                            <button class = "sales__button">
+                                В корзину
+                            </button>
                     </a>
                     <a class="sales__block" href = "#">
                         <div class = "sales__sticker">
@@ -384,9 +381,9 @@
                         </div>
                         <p class = "sales__name">товар товар</p>
                         <p class = "sales__price">ЦЕНА ₽</p>
-                        <button class = "sales__button">
-                            В корзину
-                        </button>
+                            <button class = "sales__button">
+                                В корзину
+                            </button>
                     </a>
                     <a class="sales__block" href = "#">
                         <div class = "sales__sticker">
@@ -397,9 +394,9 @@
                         </div>
                         <p class = "sales__name">товар товар</p>
                         <p class = "sales__price">ЦЕНА ₽</p>
-                        <button class = "sales__button">
-                            В корзину
-                        </button>
+                            <button class = "sales__button">
+                                В корзину
+                            </button>
                     </a>
                     <a class="sales__block" href = "#">
                         <div class = "sales__sticker">
@@ -410,9 +407,9 @@
                         </div>
                         <p class = "sales__name">товар товар</p>
                         <p class = "sales__price">ЦЕНА ₽</p>
-                        <button class = "sales__button">
-                            В корзину
-                        </button>
+                            <button class = "sales__button">
+                                В корзину
+                            </button>
                     </a>
                 </div>
             <!-- Форма и слайдер -->
@@ -422,7 +419,7 @@
                         <p class = "form-problem__title">Заполните форму и наши сотрудники свяжутся с Вами в ближайшее время</p>
                         <form class = "form-problem__container">
                             <input class = "input--default" type="text" placeholder="ИМЯ">
-                            <input class = "input--default" type="text" placeholder="">
+                            <input class = "input--default" name = "phone" type="text" placeholder="+7 (___) ___-__-__">
                             <textarea class = "input--default textarea--default" type="textarea" placeholder="ЗАДАЧА"></textarea>
                             <div class = "checkbox-container--default">
                                 <input class = "checkbox--default" type="checkbox">
@@ -431,6 +428,10 @@
                             <button class = "btn btn--big btn--red">Отправить</button>
                         </form>
                         <img class = "form-problem__picture" src = "/source/enginer-2.png">
+                    </div>
+                    <div class = "reviews-control">
+                        <div class="reviews-control-prev"></div>
+                        <div class="reviews-control-next"></div>
                     </div>
                     <div class = "swiper js-init-review-slider">
                         <div class = "swiper-wrapper">
@@ -479,10 +480,6 @@
                         </div>
                         <div class = "swiper-pagination reviews-pagination"></div>
                     </div>
-                    <div class = "reviews-control">
-                        <div class="reviews-control-prev"></div>
-                        <div class="reviews-control-next"></div>
-                    </div>
                 </div>
             </div>
             </section>
@@ -500,9 +497,11 @@
                         <img src = "/source/icons/wa-icon.png">
                         <img src = "/source/icons/mail-icon.png">
                     </div>
-                    <button class = "btn btn--default footer__call" data- >
-                        Заказать звонок
-                    </button>
+                    <div class = "footer__button">
+                        <button class = "btn btn--default footer__call" data- >
+                            Заказать звонок
+                        </button>
+                    </div>
                 </div>
                 <div class = "footer__menu">
                     <div class = "footer__column">
