@@ -40,10 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    document.querySelectorAll('.has-mobile-pic').forEach( el => {
-        el.src = el.dataset.mobile;
-    })
-
     document.querySelectorAll('[name="phone"]').forEach(input => {
         IMask(
         input,
@@ -52,4 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }    
         );
     });
+
+    if(window.innerWidth <= 768) {
+        document.querySelectorAll('.has-mobile-pic').forEach( el => {
+            el.src = el.dataset.mobile;
+        })
+    }
 })
