@@ -126,7 +126,7 @@ input[type="checkbox"] {
 }
 
 .title-triangle::before{
-    content: url(/source/icons/Triangle.png);
+    content: url(velino-design/source/icons/Triangle.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -167,7 +167,7 @@ input[type="checkbox"] {
 }
 
 ul.check-mark li::before {
-    content: url(/source/icons/check-mark.svg);
+    content: url(velino-design/source/icons/check-mark.svg);
     display: inline-block;
     height: 24px;
     width: 24px;
@@ -271,19 +271,19 @@ ul.check-mark li::before {
 }
 
 .menu__region::before {
-    content: url(/source/icons/map-marker.png);
+    content: url(velino-design/source/icons/map-marker.png);
     height: 15px;
     width: 15px;
     padding-right: 4px;
 }
 
 .menu__region::after {
-    content: url(/source/icons/arrow.svg);
+    content: url(velino-design/source/icons/arrow.svg);
     padding-left: 4px;
 }
 
 .menu__schedule::before {
-    content: url(/source/icons/icon-clock.svg);
+    content: url(velino-design/source/icons/icon-clock.svg);
     padding-right: 4px;
 }
 
@@ -292,12 +292,12 @@ ul.check-mark li::before {
 }
 
 .menu__phone::before {
-    content: url(/source/icons/device-phone.svg);
+    content: url(velino-design/source/icons/device-phone.svg);
     padding-right: 4px;
 }
 
 .menu__search::after {
-    content: url(/source/icons/search.svg);
+    content: url(velino-design/source/icons/search.svg);
     padding-left: 4px;
 }
 
@@ -364,7 +364,7 @@ ul.check-mark li::before {
 }
 
 .footer__phone::before {
-    content: url(/source/icons/device-phone-white.svg);
+    content: url(velino-design/source/icons/device-phone-white.svg);
 }
 
 .footer__socials {
@@ -558,7 +558,7 @@ ul.check-mark li::before {
 
 .products__block {
     position: relative;
-    background: url(/source/icons/logo-bg.png);
+    background: url(velino-design/source/icons/logo-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 15px 0;
@@ -586,7 +586,7 @@ ul.check-mark li::before {
 /* Подумать над картой и её местоположением */
 
 .map__section {
-    background: url(/source/map-russia.png);
+    background: url(velino-design/source/map-russia.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -75px center;
@@ -620,7 +620,7 @@ ul.check-mark li::before {
 }
 
 .map-info__title::before {
-    content: url(/source/icons/triangle-medium.svg);
+    content: url(velino-design/source/icons/triangle-medium.svg);
     position: absolute;
     top: 10px;
     left: -25px;
@@ -635,7 +635,7 @@ ul.check-mark li::before {
 /*Форма обратной связи*/
 .form-body__engineer {
     max-height: 484px;
-    background: url(/source/icons/Logo-bg-gray.png), linear-gradient(90deg, rgba(0, 128, 128, 0.8) 0%, rgba(0, 128, 128, 0.2) 80%);
+    background: url(velino-design/source/icons/Logo-bg-gray.png), linear-gradient(90deg, rgba(0, 128, 128, 0.8) 0%, rgba(0, 128, 128, 0.2) 80%);
     border-radius: 10px;
     box-shadow: var(--shadow--green);
     padding: 80px 0px 70px 60px;
@@ -687,7 +687,7 @@ ul.check-mark li::before {
 }
 
 .series__block {
-    background: url(/source/icons/logo-bg.png);
+    background: url(velino-design/source/icons/logo-bg.png);
     background-color: #fff;
     background-position: center 20px;
     background-repeat: no-repeat;
@@ -852,12 +852,12 @@ ul.check-mark li::before {
 }
 
 .reviews-control-next {
-    content: url(/source/icons/Triangle.png);
+    content: url(velino-design/source/icons/Triangle.png);
     cursor: pointer;
 }
 
 .reviews-control-prev {
-    content: url(/source/icons/Triangle.png);
+    content: url(velino-design/source/icons/Triangle.png);
     transform: rotate(180deg);
     cursor: pointer;
 }
