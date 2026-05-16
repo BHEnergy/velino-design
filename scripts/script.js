@@ -17,8 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.first__banner-pagination',
             type: 'bullets',
-            bulletClass: 'pagination-bullet__bar'
+            bulletClass: 'pagination-bullet__bar',
+            clickable: true
+        },
+        on: {
+            click() {
+                firstBanner.slideNext()
+            }
         }
+
     });
 
     const reviews = new Swiper('.js-init-review-slider', {
@@ -32,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.reviews-pagination',
             type: 'bullets',
-            bulletClass: 'pagination-bullet__bar'
+            bulletClass: 'pagination-bullet__bar',
+            clickable: true,
         },
         navigation: {
             nextEl: '.reviews-control-next',
