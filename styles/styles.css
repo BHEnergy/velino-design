@@ -210,6 +210,48 @@ ul.check-mark li::before {
     width: 15px;
 }
 
+/*Стили бургер кнопки*/
+.burger-button {
+width: 30px;
+height: 30px;
+background: transparent;
+border: none;
+cursor: pointer;
+padding: 0;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin-left: 30px;
+}
+
+/* Стили для линий гамбургера */
+.burger-line {
+width: 100%;
+height: 3px;
+background-color: white;
+transition: all 0.3s ease;
+border-radius: 2px;
+pointer-events: none;
+}
+
+/* Анимация превращения в крестик */
+.burger-button.active .burger-line:nth-child(1) {
+transform: rotate(45deg) translate(8px, 6px);
+}
+
+.burger-button.active .burger-line:nth-child(2) {
+opacity: 0;
+}
+
+.burger-button.active .burger-line:nth-child(3) {
+transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
 /*Шапка сайта*/
 .menu__upper {
     background: var(--primary-color);
@@ -333,6 +375,10 @@ ul.check-mark li::before {
     flex-direction: row;
     gap: 10px;
     margin-left: 35px;
+}
+
+.menu__panel--mobile {
+    display: none;
 }
 
 .menu__panel img {
@@ -1084,6 +1130,12 @@ ul.check-mark li::before {
 
     .menu__panel {
         display: none;
+    }
+
+    .menu__panel--mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
     }
 
     .menu__search input {

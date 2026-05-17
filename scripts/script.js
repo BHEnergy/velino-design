@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    /* Слайдер - Первый баннер */
     const firstBanner = new Swiper('.js-init-first__banner', {
         slidesPerView: 1,
         loop: true,
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    /* Слайдер - Отзывы внизу на главной */
     const reviews = new Swiper('.js-init-review-slider', {
         slidesPerView: 1,
         loop: true,
@@ -48,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    /* Маска для телефона */
     document.querySelectorAll('[name="phone"]').forEach(input => {
         IMask(
         input,
@@ -57,9 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
+    /* Смена на мобильные картинки */
     if(window.innerWidth <= 768) {
         document.querySelectorAll('.has-mobile-pic').forEach( el => {
             el.src = el.dataset.mobile;
         })
     }
+
+    /* Бургер-меню */
+    const burgerBtn = document.getElementById('burger-button');
+    burgerBtn.addEventListener('click', (el) => {
+        if(!el.target.classList.contains('active')) {
+            el.target.classList.add('active');
+        } else {
+            el.target.classList.remove('active');
+        }
+    })
+
 })
