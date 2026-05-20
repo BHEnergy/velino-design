@@ -70,11 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Бургер-меню */
     const burgerBtn = document.getElementById('burger-button');
     burgerBtn.addEventListener('click', (el) => {
-        if(!el.target.classList.contains('active')) {
-            el.target.classList.add('active');
-        } else {
-            el.target.classList.remove('active');
-        }
+        let mobileMenu = document.getElementById('mobileMenu');
+        el.target.classList.toggle('active')
+        mobileMenu.classList.toggle('active');
+
     })
 
 })
