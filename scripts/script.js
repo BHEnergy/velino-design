@@ -73,7 +73,22 @@ document.addEventListener('DOMContentLoaded', () => {
         let mobileMenu = document.getElementById('mobileMenu');
         el.target.classList.toggle('active')
         mobileMenu.classList.toggle('active');
-
+        document.querySelector('body').classList.toggle('disable-overflow');
     })
+
+    /* Закрепление шапки при скролле на мобилке */
+    if(innerWidth <= 768) {
+        window.addEventListener('scroll', () => {
+            let fixedMenu = document.querySelector('.menu__upper');
+            let marginMenu = document.querySelector('.menu__down');
+            if(window.scrollY > 300) {
+                fixedMenu.classList.add('enable-fixed');
+                marginMenu.classList.add('space-header');
+            } else {
+                fixedMenu.classList.remove('enable-fixed');
+                marginMenu.classList.remove('space-header');
+            }
+        })
+    }
 
 })

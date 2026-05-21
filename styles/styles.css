@@ -221,7 +221,7 @@ padding: 0;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-margin-left: 30px;
+/* margin-left: 30px; */
 z-index: 9999;
 }
 
@@ -251,6 +251,21 @@ transform: rotate(-45deg) translate(7px, -6px);
 @keyframes fadeIn {
 from { opacity: 0; transform: translateY(-10px); }
 to { opacity: 1; transform: translateY(0); }
+}
+
+/*Контролирующие классы*/
+.disable-overflow {
+    overflow: hidden;
+}
+
+.enable-fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.space-header {
+    margin-top: 60px;
 }
 
 /*Шапка сайта*/
@@ -389,6 +404,21 @@ to { opacity: 1; transform: translateY(0); }
 
 .mobile__menu {
     display: none;
+}
+
+.menu__navbar--mobile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    width: 60%;
+}
+
+.navbar--mobile__item {
+    padding: 20px 10px;
+    border-bottom: 1px solid gray;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .btn.btn--default.menu__call {
@@ -1141,6 +1171,10 @@ to { opacity: 1; transform: translateY(0); }
         gap: 15px;
     }
 
+    .btn--big {
+        font-size: 12px;
+    }
+
     .input--default, .checkbox-container--default {
         max-width: 220px;
     }
@@ -1170,11 +1204,11 @@ to { opacity: 1; transform: translateY(0); }
     .mobile__menu {
         position: absolute;
         height: 100vh;
-        width: 50%;
+        width: 100%;
         top: 0;
         left: 0%;
         z-index: 999;
-        background: #fff;
+        backdrop-filter: brightness(0.5);
     }
 
     .js-init-first__banner {
