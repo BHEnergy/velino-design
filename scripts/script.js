@@ -91,4 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    /* Dropdown в статье */
+    const dropdownItems = document.querySelectorAll('.dropdown__item');
+    dropdownItems.forEach( (el, index) => {
+        el.addEventListener('click', () => {
+            el.classList.toggle('item--expanded');
+        })
+    })
+
 })
