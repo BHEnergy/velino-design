@@ -99,4 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+
+    /* Скролл */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+        const targetId = anchor.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start' 
+            });
+        }
+    });
+});
 })
