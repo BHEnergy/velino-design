@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link href="./styles/swiper.css" rel="stylesheet" />
+    <link href="./styles/swiper.min.css" rel="stylesheet" />
+    <script src="./scripts/script.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.min.js" type="text/javascript"></script>
+    <script
+      src="./scripts/swiper-bundle.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./scripts/gsap.min.js" type="text/javascript"></script>
+    <script src="./scripts/mask.js" type="text/javascript"></script>
+    <title>Системы дезинфекции</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="menu__upper">
+          <div id="mobileMenu" class="mobile__menu">
+            <div class="menu__navbar--mobile">
+              <a href="#" class="navbar--mobile__item">Каталог</a>
+              <a href="#" class="navbar--mobile__item">О компании</a>
+              <a href="#" class="navbar--mobile__item">Акции</a>
+              <a href="#" class="navbar--mobile__item">Доставка и оплата</a>
+              <a href="#" class="navbar--mobile__item">Сервисный центр</a>
+              <a href="#" class="navbar--mobile__item">Статьи</a>
+              <a href="#" class="navbar--mobile__item">Документация</a>
+              <a href="#" class="navbar--mobile__item">Контакты</a>
+            </div>
+          </div>
+          <div class="menu__row container">
+            <img class="menu__logo" src="./source/logo.png" />
+            <div class="menu__navbar">
+              <ul>
+                <li class="current-position">
+                  <a href="#">Каталог</a>
+                </li>
+                <li>О компании</li>
+                <li>Акции</li>
+                <li>Доставка и оплата</li>
+                <li>Сервисный центр</li>
+                <li>Статьи</li>
+                <li>Документация</li>
+                <li>Контакты</li>
+              </ul>
+            </div>
+            <div class="menu__socials">
+              <img src="./source/icons/tg-icon.svg" />
+              <img src="./source/icons/wa-icon.svg" />
+              <img src="./source/icons/mail-icon.svg" />
+              <!-- У кнопок будет задан параметр, который будет отвечать за формы -->
+              <button class="btn btn--default menu__call" data->
+                Заказать звонок
+              </button>
+            </div>
+            <div class="menu__panel--mobile">
+              <img src="./source/icons/like-icon-white.svg" />
+              <img src="./source/icons/cart-white-icon.svg" />
+              <img src="./source/icons/lk-icon-white.svg" />
+              <button
+                id="burger-button"
+                class="burger-button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+              >
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="menu__down">
+          <div class="menu__row container">
+            <div class="menu__info">
+              <div class="menu__region">Москва</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__schedule">Пн-пт: 9:00-18:00</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__phone">8 (800) 000-00-00</div>
+            </div>
+            <div class="menu__control">
+              <div class="menu__search">
+                <input placeholder="Поиск товара по названию..." />
+              </div>
+              <div class="menu__panel">
+                <img src="./source/icons/like-icon.svg" />
+                <img src="./source/icons/cart-icon.svg" />
+                <img src="./source/icons/lk-icon.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <!-- Хлебные крошки -->
+        <div class = "container">
+          <div class="breadcrumbs">
+            <a class="breadcrumbs--item" href="/">Главная</a>
+            <span class = "breadcrumbs--separator">/</span>
+            <span>Системы дезинфекции</span>
+          </div>
+        </div>
+        
+        <section class = "background-section">
+            <!-- Первый баннер -->
+            <div class = "container">
+              <div class = "first-banner--section">
+                <div class = "section__info">
+                  <div class = "first-block__feacher">Единственный официальный дистрибьютер EMEC в РФ</div>
+                  <h1 class = "title text-green section__title">Системы дезинфекции и контроля качества воды EMEC</h1>
+                  <p class = "section__subtitle">Комплексные решения для обеззараживания воды: генераторы диоксида хлора серии LOTUS, контроллеры, датчики</p>
+                  <div class = "section__tags">
+                    <div class="section__tag">Эксклюзив: генераторы ClO₂</div>
+                    <div class="section__tag">Инженерная поддержка</div>
+                    <div class="section__tag">100% производство в Италии</div>
+                    <div class="section__tag">склад в РФ</div>
+                  </div>
+                  <div class = "section__button">
+                    <button class = "btn btn--big btn--red">
+                      Подобрать систему
+                    </button>
+                  </div>
+                </div>
+                <div class = "section__picture">
+                  <img src="">
+                </div>
+              </div>
+            </div>
+
+            <!-- Почему... -->
+            <div class = "container">
+              <div class = "section-block--why">
+                <div class = "why-block__info">
+                  <h2 class = "title title-triangle text-large text-white">Почему диоксид хлора?</h2>
+                  <p class = "why-block__subtitle">Диоксид хлора — один из самых эффективных окислителей для воды. EMEC LOTUS производит его прямо на вашем объекте.</p>
+                  <p class = "why-block__subtitle">Вам не нужно хранить концентрированные реагенты. ClO₂ образуется ровно тогда, когда нужен.</p>
+                </div>
+                <div class = "why-block__reasons">
+                  <div class="why-block__reason">
+                    <p class = "red--title reason__title">Нет тригалометанов</p>
+                    <p class = "reason__description">Не образует токсичных соединений, безопасен для экологии.</p>
+                  </div>
+                  <div class="why-block__reason">
+                    <p class = "red--title reason__title">Работает при любом pH</p>
+                    <p class = "reason__description">Диапазон 4–10 без потери эффективности.</p>
+                  </div>
+                  <div class="why-block__reason">
+                    <p class = "red--title reason__title">Убирает биопленки и запах</p>
+                    <p class = "reason__description">Эффективно удаляет железо, марганец, органику.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Что входит в систему? -->
+            <div class = "container">
+              <h2 class = "title title-triangle text-large text-white">Что входит в систему?</h2>
+            </div>
+
+            <!-- Серии -->
+            <div class = "container">
+              <h2 class = "title title-triangle text-large text-white">Серии</h2>
+            </div>
+        </section>
+
+        <section class = "background-section-toBottom pb-50">
+            <!-- Информация -->
+            <div class = "container">
+              <div class = "info__blocks">
+            <h2 class = "title title-triangle text-large text-green">Как мы делаем системы надежными</h2>
+                <div class = "stage-4 mt-100">
+                    <div class = "info__block">
+                        <div class = "info__picture">
+                            <img src = "./source/clock-overtime.png" >
+                        </div>
+                        <p class = "info__title">
+                            Мгновенное производство   
+                        </p>
+                        <div class = "info__description">
+                            <p>ClO₂ не накапливается, реагент рождается только в момент подачи.</p>
+                        </div>
+                    </div>
+                    <div class = "info__block">
+                        <div class = "info__picture">
+                            <img src = "./source/fast-search.png" >
+                        </div>
+                        <p class = "info__title">
+                            Многоуровневый контроль
+                        </p>
+                        <div class = "info__description">
+                            <p>3–4 датчика SEFL следят за подачей. При отклонении — остановка.</p>
+                        </div>
+                    </div>
+                    <div class = "info__block">
+                        <div class = "info__picture">
+                            <img src = "./source/processor.png" >
+                        </div>
+                        <p class = "info__title">
+                            Интеллектуальный контроллер
+                        </p>
+                        <div class = "info__description">
+                            <p>Энкодер, журнал событий, RS485, работа –0 до +45°С.</p>
+                        </div>
+                    </div>
+                    <div class = "info__block">
+                        <div class = "info__picture">
+                            <img src = "./source/alarm.png" >
+                        </div>
+                        <p class = "info__title">
+                            Аварийные сигналы
+                        </p>
+                        <div class = "info__description">
+                            <p>Утечка, низкий уровень реагентов, выход за концентрацию — все под контролем.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class = "info__block solo-info__block">
+                    <p class = "info__title">
+                        Эксклюзив в РФ: 
+                    </p>
+                    <div class = "info__description">
+                        <p>
+                            Генераторы диоксида хлора серии LOTUS  — единственные доступные решения на хлоритной технологии после ухода европейских производителей.
+                        </p>
+                    </div>
+                    <button class = "btn btn--big btn--red">
+                        Обсудить задачу с инженером
+                    </button>
+                </div>
+            </div>
+            </div>
+
+            <!-- Станьте дилером -->
+            <div class = "container">
+
+            </div>
+
+            <!-- Вопросы -->
+            <div class = "container">
+                <h2 class = "title title-triangle text-large text-white">Часто задаваемые вопросы</h2>
+                <div class="block--dropdowns">
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>VELON</b> – новое поколение перистальтических насосов
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>WN 2025</b> – универсальная новинка
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>Prisma</b> – прецизионные насосы на шаговом двигателе
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>PRIUS</b> – промышленные мембранные насосы
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>VELON</b> – новое поколение перистальтических насосов
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>WN 2025</b> – универсальная новинка
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>Prisma</b> – прецизионные насосы на шаговом двигателе
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>PRIUS</b> – промышленные мембранные насосы
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>VELON</b> – новое поколение перистальтических насосов
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>WN 2025</b> – универсальная новинка
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>Prisma</b> – прецизионные насосы на шаговом двигателе
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown__item">
+                  <div class="dropdown__handler">
+                    <b>PRIUS</b> – промышленные мембранные насосы
+                  </div>
+                  <div class="dropwodn__detail">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged. It was popularised in the
+                      1960s with the release of Letraset sheets containing Lorem
+                      Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem
+                      Ipsum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__body">
+            <div class="footer__info">
+              <img class="footer__logo" src="./source/logo.png" />
+              <div class="footer__phone">8 (800) 000-00-00</div>
+              <div class="footer__socials">
+                <img src="./source/icons/tg-icon.svg" />
+                <img src="./source/icons/wa-icon.svg" />
+                <img src="./source/icons/mail-icon.svg" />
+              </div>
+              <div class="footer__button">
+                <button class="btn btn--default footer__call" data->
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Каталог</li>
+                  <li>Акции</li>
+                  <li>Сервисный центр</li>
+                  <li>Доставка и оплата</li>
+                  <li>Гарантия и возврат</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Новости</li>
+                  <li>Статьи</li>
+                  <li>Документация</li>
+                  <li>Партнеры</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>О компании</li>
+                  <li>Вакансии</li>
+                  <li>Реквизиты</li>
+                  <li>Контакты</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__company">
+            <p>
+              ООО “Велино”,<br />
+              юридическая информация, юр адрес, ИНН, ОГРН, Лицензия,<br />
+              что-то еще такое, и вот такое, и БИК и Банк и что там еще надо.
+            </p>
+            <p>
+              © 2026 Velino. Все права защищены.<br />
+              Создание и продвижение сайта ООО “Маст”
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
