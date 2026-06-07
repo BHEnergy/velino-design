@@ -50,6 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    /* Бесконечная строчка с текстом */
+    const infinityText = new Swiper('.js-init-infinity__text', {
+        loop: true,
+        freeMode: true,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        speed: 30000,
+    });
+
     /* Маска для телефона */
     document.querySelectorAll('[name="phone"]').forEach(input => {
         IMask(

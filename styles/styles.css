@@ -250,6 +250,13 @@ ul.list-triangle li {
     font-size: 30px;
 }
 
+.subtitle {
+    line-height: 1.1;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .text-green {
     color: var(--primary-color);
 }
@@ -300,6 +307,7 @@ ul.check-mark li::before {
     font-size: 12px;
     font-weight: 600;
     box-shadow: 0px 4px 10px rgba(0, 128, 128, 0.3);
+    text-transform: uppercase;
 }
 
 .textarea--default {
@@ -1680,7 +1688,7 @@ a.breadcrumbs--item:hover {
     align-items: center;
 
     & img {
-        max-width: 320px;
+        max-width: 420px;
         width: 100%;
         margin: 0 auto;
     }
@@ -1943,6 +1951,7 @@ a.breadcrumbs--item:hover {
     background-color: #fff;
     padding: 45px 40px 40px 50px;
     border-radius: 10px;
+    box-shadow: var(--shadow--green);
 }
 
 .difference__title {
@@ -1996,8 +2005,95 @@ a.breadcrumbs--item:hover {
 .faq-block {
     margin: 70px 80px 0;
 }
-/*Медиа-запросы*/
 
+/* Шаговые насосы */
+
+.section__button--flex {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+
+.js-init-infinity__text {
+    margin-top: 30px;
+}
+
+.js-init-infinity__text .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.infinity-text__slide {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: auto !important;
+}
+
+.series-filter__container {
+    margin-top: 80px;
+}
+
+.feachers--section {
+    margin-top: 80px;
+}
+
+.feachers--container {
+    margin-top: 80px;
+}
+
+.feacher__item--small {
+    background: #fff;
+    padding: 45px 18px;
+    border-radius: 10px;
+
+    & .feacher__title {
+        font-size: 18px;
+        padding-left: 35px;
+        min-height: 50px;
+        align-content: center;
+    }
+
+    & .feacher__description {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+.feacher__item--big {
+    background: #fff;
+    padding: 45px 25px 55px;
+    border-radius: 10px;
+    box-shadow: var(--shadow--green);
+
+    & .feacher__picture {
+        max-height: 80px;
+        max-width: 80px;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & .feacher__title {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    & .feacher__description {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+.feacher__item--big.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Медиа-запросы*/
 @media (width > 1200px) {
     .container {
         max-width: 1440px;
@@ -2009,6 +2105,10 @@ a.breadcrumbs--item:hover {
 
     .text-large {
         font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 24px;
     }
 
     .red--title {
@@ -2069,6 +2169,7 @@ a.breadcrumbs--item:hover {
 
     .series__block {
         min-height: 320px;
+        padding: 25px 15px 20px;
     }
 
     .series__name {
@@ -2352,6 +2453,16 @@ a.breadcrumbs--item:hover {
 
     .info__blocks--section {
         margin-top: 80px;
+    }
+
+    /* Шаговые насосы */
+
+    .section__button--flex {
+        gap: 40px;
+    }
+
+    .infinity-text__slide {
+        font-size: 24px;
     }
 }
 

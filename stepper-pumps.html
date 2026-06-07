@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link href="./styles/swiper.css" rel="stylesheet" />
+    <link href="./styles/swiper.min.css" rel="stylesheet" />
+    <script src="./scripts/script.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.min.js" type="text/javascript"></script>
+    <script
+      src="./scripts/swiper-bundle.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./scripts/gsap.min.js" type="text/javascript"></script>
+    <script src="./scripts/mask.js" type="text/javascript"></script>
+    <title>Шаговые насосы</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="menu__upper">
+          <div id="mobileMenu" class="mobile__menu">
+            <div class="menu__navbar--mobile">
+              <a href="#" class="navbar--mobile__item">Каталог</a>
+              <a href="#" class="navbar--mobile__item">О компании</a>
+              <a href="#" class="navbar--mobile__item">Акции</a>
+              <a href="#" class="navbar--mobile__item">Доставка и оплата</a>
+              <a href="#" class="navbar--mobile__item">Сервисный центр</a>
+              <a href="#" class="navbar--mobile__item">Статьи</a>
+              <a href="#" class="navbar--mobile__item">Документация</a>
+              <a href="#" class="navbar--mobile__item">Контакты</a>
+            </div>
+          </div>
+          <div class="menu__row container">
+            <img class="menu__logo" src="./source/logo.png" />
+            <div class="menu__navbar">
+              <ul>
+                <li class="current-position">
+                  <a href="#">Каталог</a>
+                </li>
+                <li>О компании</li>
+                <li>Акции</li>
+                <li>Доставка и оплата</li>
+                <li>Сервисный центр</li>
+                <li>Статьи</li>
+                <li>Документация</li>
+                <li>Контакты</li>
+              </ul>
+            </div>
+            <div class="menu__socials">
+              <img src="./source/icons/tg-icon.svg" />
+              <img src="./source/icons/wa-icon.svg" />
+              <img src="./source/icons/mail-icon.svg" />
+              <!-- У кнопок будет задан параметр, который будет отвечать за формы -->
+              <button class="btn btn--default menu__call" data->
+                Заказать звонок
+              </button>
+            </div>
+            <div class="menu__panel--mobile">
+              <img src="./source/icons/like-icon-white.svg" />
+              <img src="./source/icons/cart-white-icon.svg" />
+              <img src="./source/icons/lk-icon-white.svg" />
+              <button
+                id="burger-button"
+                class="burger-button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+              >
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="menu__down">
+          <div class="menu__row container">
+            <div class="menu__info">
+              <div class="menu__region">Москва</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__schedule">Пн-пт: 9:00-18:00</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__phone">8 (800) 000-00-00</div>
+            </div>
+            <div class="menu__control">
+              <div class="menu__search">
+                <input placeholder="Поиск товара по названию..." />
+              </div>
+              <div class="menu__panel">
+                <img src="./source/icons/like-icon.svg" />
+                <img src="./source/icons/cart-icon.svg" />
+                <img src="./source/icons/lk-icon.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <!-- Хлебные крошки -->
+        <div class="container">
+          <div class="breadcrumbs">
+            <a class="breadcrumbs--item" href="/">Каталог</a>
+            <span class="breadcrumbs--separator">/</span>
+            <span>Шаговые насосы</span>
+          </div>
+        </div>
+
+        <section class="background-section">
+          <!-- Первый баннер -->
+          <div class="container">
+            <div class="first-banner--section">
+              <div class="section__info">
+                <div class="first-block__feacher">
+                  Официальный дилер EMEC в России
+                </div>
+                <h1 class="title text-green section__title">
+                  Шаговые дозирующие насосы EMEC для точного и управляемого
+                  дозирования
+                </h1>
+                <p class="section__subtitle">
+                  Высокоточные насосы для задач, где важен контроль,
+                  стабильность и регулировка подачи реагентов в промышленности,
+                  водоподготовке и технологических процессах.
+                </p>
+                <div class="section__tags">
+                  <div class="section__tag">
+                    Плавная и точная регулировка дозирования
+                  </div>
+                  <div class="section__tag">
+                    Высокая стабильность подачи реагентов
+                  </div>
+                  <div class="section__tag">
+                    Работа с переменными нагрузками
+                  </div>
+                  <div class="section__tag">
+                    Интеграция в автоматизированные системы
+                  </div>
+                </div>
+                <div class="section__button section__button--flex">
+                  <button class="btn btn--big btn--red">Подобрать насос</button>
+                  <button class="btn btn--big btn--white">
+                    Подобрать консультацию
+                  </button>
+                </div>
+              </div>
+              <div class="section__picture">
+                <img src="./source/stepper-pumps.png" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Бесконечная строчка -->
+          <div class="container">
+            <div class="swiper js-init-infinity__text">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide infinity-text__slide">
+                    Регулировка дозирования от 1% до 100%. Перистальтическая технология для абразивных и вязких сред. Управление через ERMES и MyEmec.
+                </div>
+                <div class="swiper-slide infinity-text__slide">
+                    Регулировка дозирования от 1% до 100%. Перистальтическая технология для абразивных и вязких сред. Управление через ERMES и MyEmec.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Информация -->
+          <div class="container">
+            <div class="info__blocks--section">
+              <h2 class="title title-triangle text-large text-white">
+                Надежность там, где другие не справляются
+                <p class = "subtitle">
+                  Перистальтические насосы EMEC спроектированы для работы в самых сложных условиях. Усиленная конструкция роликового механизма и качественные шланги обеспечивают стабильную работу даже с абразивными средами.  
+                </p>
+              </h2>
+              <div class="stage-4 info__blocks">
+                <div class="info__block">
+                  <div class="info__picture">
+                    <img src="./source/titan-body.png">
+                  </div>
+                  <p class="info__title">Усиленный<br> корпус</p>
+                  <div class="info__description">
+                    <p>
+                      Из инженерного пластика или алюминия для максимальной защиты механизма.
+                    </p>
+                  </div>
+                </div>
+                <div class="info__block">
+                  <div class="info__picture">
+                    <img src="./source/fast-search.png" />
+                  </div>
+                  <p class="info__title">Прецизионные<br> ролики</p>
+                  <div class="info__description">
+                    <p>
+                      Обработка для равномерного износа шланга и стабильной подачи.
+                    </p>
+                  </div>
+                </div>
+                <div class="info__block">
+                  <div class="info__picture">
+                    <img src="./source/broken-chains.png" />
+                  </div>
+                  <p class="info__title">Выбор материалов шлангов</p>
+                  <div class="info__description">
+                    <p>Широкий выбор под вашу химию — от пищевых до агрессивных реагентов.</p>
+                  </div>
+                </div>
+                <div class="info__block">
+                  <div class="info__picture">
+                    <img src="./source/fault.png" />
+                  </div>
+                  <p class="info__title">
+                    Доступность расходников
+                  </p>
+                  <div class="info__description">
+                    <p>
+                      Шланги в наличии на складе в РФ, быстрая замена.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Серии -->
+          <div class="container series-filter__container">
+            <div class="series-filter__header">
+              <h2 class="title title-triangle text-large text-white">
+                Каталог шаговых дозирующих насосов
+              </h2>
+              <span class="series-filter__founded">Найдено 8 товаров</span>
+            </div>
+            <div class="series-filter__section">
+              <div class="filter--block">
+                <div class="filter--input">
+                  <span class="filter--input__label">Тип насоса</span>
+                  <div class="filter--input__select">
+                    <input
+                      class="filter--input__input"
+                      placeholder="Выбрать вариант..."
+                    />
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label"
+                    >Серия</span
+                  >
+                  <div class="filter--input__select">
+                    <input
+                      class="filter--input__input"
+                      placeholder="Выбрать вариант..."
+                    />
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label"
+                    >Напряжение</span
+                  >
+                  <div class="filter--input__select">
+                    <input
+                      class="filter--input__input"
+                      placeholder="Выбрать вариант..."
+                    />
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label"
+                    >Производительность, л/ч</span
+                  >
+                  <div class="filter--input__select">
+                    <input
+                      class="filter--input__input"
+                      placeholder="Выбрать вариант..."
+                    />
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label"
+                    >Давление, бар</span
+                  >
+                  <div class="filter--input__select">
+                    <input
+                      class="filter--input__input"
+                      placeholder="Выбрать вариант..."
+                    />
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label"
+                    >Материал</span
+                  >
+                  <div class="filter--input__select">
+                    <input
+                      class="filter--input__input"
+                      placeholder="Выбрать вариант..."
+                    />
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <button class="btn btn--big btn--white">Показать товары</button>
+              </div>
+              <div class="series__section stage-3">
+                <a class="series__block" href="#">
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <p class="series__name">LOTUS</p>
+                </a>
+                <a class="series__block" href="#">
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <p class="series__name">PRISMA</p>
+                </a>
+                <a class="series__block" href="#">
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <p class="series__name">WNPHXX</p>
+                </a>
+                <a class="series__block" href="#">
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <p class="series__name">PRIUS</p>
+                </a>
+                <a class="series__block" href="#">
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <p class="series__name">PRIUS</p>
+                </a>
+                <a class="series__block" href="#">
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <p class="series__name">PRIUS</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <!-- Cмотрите также -->
+          <div class="container">
+            <h2
+              class="title title-triangle text-large text-green series__title"
+            >
+              Смотрите также
+            </h2>
+            <div class="series__section stage-4">
+              <a class="series__block" href="#">
+                <div class="series__picture">
+                  <img src="./source/equipment-3.png" />
+                </div>
+                <p class="series__name">Дозирующий шаговый насос VELON MF</p>
+                <p class="series__description"></p>
+              </a>
+              <a class="series__block" href="#">
+                <div class="series__picture">
+                  <img src="./source/equipment-3.png" />
+                </div>
+                <p class="series__name">Дозирующий шаговый насос VELON MF</p>
+                <p class="series__description"></p>
+              </a>
+              <a class="series__block" href="#">
+                <div class="series__picture">
+                  <img src="./source/equipment-3.png" />
+                </div>
+                <p class="series__name">Дозирующий шаговый насос VELON MF</p>
+                <p class="series__description">
+
+                </p>
+              </a>
+              <a class="series__block" href="#">
+                <div class="series__picture">
+                  <img src="./source/equipment-3.png" />
+                </div>
+                <p class="series__name">Дозирующий шаговый насос VELON MF</p>
+                <p class="series__description"></p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class = "background-section">
+          <!-- Станьте дилером -->
+          <div class="container">
+            <div class="difference-section">
+              <div class="difference__block">
+                <h2
+                  class="title title-triangle text-large text-green difference__title"
+                >
+                  Станьте официальным VELINO-дилером
+                </h2>
+                <p class="difference__description">
+                  Итальянский бренд с 40-летней историей. Первый официальный
+                  дистрибьютор в России<br />
+                  приглашает к сотрудничеству.
+                </p>
+                <div class="difference-separator"></div>
+                <ul class="list-triangle">
+                  <li>
+                    Складской запас в Москве — отгрузка в день оплаты, без
+                    предзаказов из Италии
+                  </li>
+                  <li>
+                    Техническая поддержка ваших менеджеров и инженеров —
+                    обучение, документация, каталоги
+                  </li>
+                  <li>
+                    Помощь в расчёте объектов, подготовке КП и тендерной
+                    документации
+                  </li>
+                  <li>
+                    Защита территории — эксклюзивные регионы без пересечения с
+                    другими дилерами
+                  </li>
+                </ul>
+              </div>
+              <div class="difference__block form">
+                <p class="red--title">
+                  Стать дилером
+                </p>
+                <p class="difference__description">
+                  Заполните форму, и мы свяжемся с вами в течение одного рабочего дня
+                </p>
+                <form class="form-feedback__container">
+                  <input class="input--default" type="text" placeholder="ИМЯ" />
+                  <input
+                    class="input--default"
+                    type="text"
+                    placeholder="Название компании"
+                  />
+                  <input
+                    class="input--default"
+                    type="text"
+                    placeholder="ваше имя и должность"
+                  />
+                  <input
+                    class="input--default"
+                    name="phone"
+                    type="text"
+                    placeholder="+7 (___) ___-__-__"
+                  />
+                  <input
+                    class="input--default"
+                    name="phone"
+                    type="text"
+                    placeholder="EMAIL"
+                  />
+                  <textarea
+                    class="input--default textarea--default"
+                    type="textarea"
+                    placeholder="ЗАДАЧА"
+                  ></textarea>
+                  <div class="checkbox-container--default">
+                    <input
+                      class="checkbox--default checkbox--grey"
+                      type="checkbox"
+                    />
+                    <label
+                      >Я ознакомлен с политикой обработки персональных данных и
+                      даю согласие на обработку моих персональных данных</label
+                    >
+                  </div>
+                  <button class="btn btn--big btn--red">Отправить</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Фичеры 4 -->
+            <div class = "feachers--section">
+              <h2 class="title title-triangle text-large text-white">
+                Идеальны для дозирования в ключевых отраслях
+              </h2>
+              <div class = "feachers--container stage-4">
+                <div class="feacher__item--small">
+                  <p class = "red--title small-triangle feacher__title">Лаборатории и фармацевтика</p>
+                  <p class = "feacher__description">Стерильные среды, чувствительные к сдвигу жидкости, точное дозирование реактивов.</p>
+                </div>
+                <div class="feacher__item--small">
+                  <p class = "red--title small-triangle feacher__title">Пищевая промышленность</p>
+                  <p class = "feacher__description">Сиропы, концентраты, красители, вязкие добавки, продукты с частицами.</p>
+                </div>
+                <div class="feacher__item--small">
+                  <p class = "red--title small-triangle feacher__title">Химические производства</p>
+                  <p class = "feacher__description">Абразивные суспензии, кислоты, щелочи, газосодержащие жидкости.</p>
+                </div>
+                <div class="feacher__item--small">
+                  <p class = "red--title small-triangle feacher__title">Водоподготовка</p>
+                  <p class = "feacher__description">Коагулянты, флокулянты, гипохлорит натрия.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Фичеры 3 -->
+            <div class = "feachers--section">
+              <h2 class="title title-triangle text-large text-white">
+                «Включил и забыл» — это про дозирующие насосы EMEC
+                <p class = "subtitle">
+                  Интуитивный интерфейс, стабильная работа, облачное управление Nimbus. Информация о работе доступна в личном кабинете на сайте.
+                </p>
+              </h2>
+              <div class = "feachers--container stage-3">
+                <div class="feacher__item--big flex-column">
+                  <div class = "feacher__picture">
+                    <img src = "./source/myemec.png">
+                  </div>
+                  <p class = "red--title feacher__title">MyEmec / Nimbus</p>
+                  <div class = "feacher__description">
+                    <ul class = "dot-before">
+                      <li>Удаленный контроль, ресурс оборудования, история аварий</li>
+                      <li>Возможность заказать консультацию через e-mail</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="feacher__item--big flex-column">
+                  <div class = "feacher__picture">
+                    <img src = "./source/integration.png">
+                  </div>
+                  <p class = "red--title feacher__title">Легкая интеграция</p>
+                  <div class = "feacher__description">
+                    <ul class = "dot-before">
+                      <li>Надежный привод</li>
+                      <li>Modbus, PWM, 4-20 мА, работа с АСУ ТП</li>
+                      <li>Подключение к внешним системам управления.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="feacher__item--big flex-column">
+                  <div class = "feacher__picture">
+                    <img src = "./source/tools.png">
+                  </div>
+                  <p class = "red--title feacher__title">Ремонт за 10 минут</p>
+                  <div class = "feacher__description">
+                    <ul class = "dot-before">
+                      <li>Замена мембраны или клапанов без демонтажа всего насоса</li>
+                      <li>Все необходимые запасные части в наличии</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <!-- Баннер маленький с фичерами -->
+
+          <!-- Форма -->
+        </section>
+
+        <section class="background-section-toBottom pb-50">
+          <!-- Вопросы -->
+          <div class="container">
+            <h2 class="title title-triangle text-large text-green">
+              Часто задаваемые вопросы
+            </h2>
+            <div class="block--dropdowns faq-block">
+              <div class="dropdown__item">
+                <div class="dropdown__handler">
+                  В каких отраслях лучше всего использовать шаговые (перистальтические) насосы и почему?
+                </div>
+                <div class="dropwodn__detail">
+                  <p>
+                    В шаговых насосах используется высокоточный шаговый двигатель с электронным управлением, который работает значительно тише традиционных соленоидных или моторных насосов. Отсутствие ударных нагрузок и плавное вращение роликового механизма снижают уровень шума до 45-50 дБ, что особенно важно для объектов с круглосуточным присутствием персонала: лабораторий, медицинских центров, бассейнов, гостиниц, пищевых производств. Бесшумная работа также повышает комфорт в офисных и жилых зонах, где установлены системы дозирования химикатов. Кроме того, низкий уровень вибрации продлевает срок службы компонентов и уменьшает нагрузку на крепления и трубопроводы.
+                  </p>
+                </div>
+              </div>
+              <div class="dropdown__item">
+                <div class="dropdown__handler">
+                  Как шаговые насосы справляются с дозированием вязких или абразивных жидкостей? Не забиваются ли они?
+                </div>
+                <div class="dropwodn__detail">
+                  <p>
+                    В шаговых насосах используется высокоточный шаговый двигатель с электронным управлением, который работает значительно тише традиционных соленоидных или моторных насосов. Отсутствие ударных нагрузок и плавное вращение роликового механизма снижают уровень шума до 45-50 дБ, что особенно важно для объектов с круглосуточным присутствием персонала: лабораторий, медицинских центров, бассейнов, гостиниц, пищевых производств. Бесшумная работа также повышает комфорт в офисных и жилых зонах, где установлены системы дозирования химикатов. Кроме того, низкий уровень вибрации продлевает срок службы компонентов и уменьшает нагрузку на крепления и трубопроводы.
+                  </p>
+                </div>
+              </div>
+              <div class="dropdown__item">
+                <div class="dropdown__handler">
+                  Насколько сложно обслуживать перистальтический насос? Как часто менять шланг?
+                </div>
+                <div class="dropwodn__detail">
+                  <p>
+                    В шаговых насосах используется высокоточный шаговый двигатель с электронным управлением, который работает значительно тише традиционных соленоидных или моторных насосов. Отсутствие ударных нагрузок и плавное вращение роликового механизма снижают уровень шума до 45-50 дБ, что особенно важно для объектов с круглосуточным присутствием персонала: лабораторий, медицинских центров, бассейнов, гостиниц, пищевых производств. Бесшумная работа также повышает комфорт в офисных и жилых зонах, где установлены системы дозирования химикатов. Кроме того, низкий уровень вибрации продлевает срок службы компонентов и уменьшает нагрузку на крепления и трубопроводы.
+                  </p>
+                </div>
+              </div>
+              <div class="dropdown__item">
+                <div class="dropdown__handler">
+                  Можно ли управлять насосами VELON или WT удалённо и интегрировать их в систему автоматизации?
+                </div>
+                <div class="dropwodn__detail">
+                  <p>
+                    В шаговых насосах используется высокоточный шаговый двигатель с электронным управлением, который работает значительно тише традиционных соленоидных или моторных насосов. Отсутствие ударных нагрузок и плавное вращение роликового механизма снижают уровень шума до 45-50 дБ, что особенно важно для объектов с круглосуточным присутствием персонала: лабораторий, медицинских центров, бассейнов, гостиниц, пищевых производств. Бесшумная работа также повышает комфорт в офисных и жилых зонах, где установлены системы дозирования химикатов. Кроме того, низкий уровень вибрации продлевает срок службы компонентов и уменьшает нагрузку на крепления и трубопроводы.
+                  </p>
+                </div>
+              </div>
+              <div class="dropdown__item">
+                <div class="dropdown__handler">
+                  В чём отличие серий VELON MF, PO, CL, PM? Как выбрать подходящую версию?
+                </div>
+                <div class="dropwodn__detail">
+                  <p>
+                    В шаговых насосах используется высокоточный шаговый двигатель с электронным управлением, который работает значительно тише традиционных соленоидных или моторных насосов. Отсутствие ударных нагрузок и плавное вращение роликового механизма снижают уровень шума до 45-50 дБ, что особенно важно для объектов с круглосуточным присутствием персонала: лабораторий, медицинских центров, бассейнов, гостиниц, пищевых производств. Бесшумная работа также повышает комфорт в офисных и жилых зонах, где установлены системы дозирования химикатов. Кроме того, низкий уровень вибрации продлевает срок службы компонентов и уменьшает нагрузку на крепления и трубопроводы.
+                  </p>
+                </div>
+              </div>
+              <div class="dropdown__item">
+                <div class="dropdown__handler">
+                  Как работает перистальтический насос?
+                </div>
+                <div class="dropwodn__detail">
+                  <p>
+                    В шаговых насосах используется высокоточный шаговый двигатель с электронным управлением, который работает значительно тише традиционных соленоидных или моторных насосов. Отсутствие ударных нагрузок и плавное вращение роликового механизма снижают уровень шума до 45-50 дБ, что особенно важно для объектов с круглосуточным присутствием персонала: лабораторий, медицинских центров, бассейнов, гостиниц, пищевых производств. Бесшумная работа также повышает комфорт в офисных и жилых зонах, где установлены системы дозирования химикатов. Кроме того, низкий уровень вибрации продлевает срок службы компонентов и уменьшает нагрузку на крепления и трубопроводы.
+                  </p>
+                </div>
+              </div>
+              <div class="dropdown__item">
+                <div class="dropdown__handler">
+                  Почему шаговые насосы работают бесшумно и как это важно для моей установки?
+                </div>
+                <div class="dropwodn__detail">
+                  <p>
+                    В шаговых насосах используется высокоточный шаговый двигатель с электронным управлением, который работает значительно тише традиционных соленоидных или моторных насосов. Отсутствие ударных нагрузок и плавное вращение роликового механизма снижают уровень шума до 45-50 дБ, что особенно важно для объектов с круглосуточным присутствием персонала: лабораторий, медицинских центров, бассейнов, гостиниц, пищевых производств. Бесшумная работа также повышает комфорт в офисных и жилых зонах, где установлены системы дозирования химикатов. Кроме того, низкий уровень вибрации продлевает срок службы компонентов и уменьшает нагрузку на крепления и трубопроводы.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__body">
+            <div class="footer__info">
+              <img class="footer__logo" src="./source/logo.png" />
+              <div class="footer__phone">8 (800) 000-00-00</div>
+              <div class="footer__socials">
+                <img src="./source/icons/tg-icon.svg" />
+                <img src="./source/icons/wa-icon.svg" />
+                <img src="./source/icons/mail-icon.svg" />
+              </div>
+              <div class="footer__button">
+                <button class="btn btn--default footer__call" data->
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Каталог</li>
+                  <li>Акции</li>
+                  <li>Сервисный центр</li>
+                  <li>Доставка и оплата</li>
+                  <li>Гарантия и возврат</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Новости</li>
+                  <li>Статьи</li>
+                  <li>Документация</li>
+                  <li>Партнеры</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>О компании</li>
+                  <li>Вакансии</li>
+                  <li>Реквизиты</li>
+                  <li>Контакты</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__company">
+            <p>
+              ООО “Велино”,<br />
+              юридическая информация, юр адрес, ИНН, ОГРН, Лицензия,<br />
+              что-то еще такое, и вот такое, и БИК и Банк и что там еще надо.
+            </p>
+            <p>
+              © 2026 Velino. Все права защищены.<br />
+              Создание и продвижение сайта ООО “Маст”
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
