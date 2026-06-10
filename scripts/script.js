@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Бесконечная строчка с текстом */
     const infinityText = new Swiper('.js-init-infinity__text', {
         loop: true,
-        freeMode: true,
+        freeMode: false,
+        allowTouchMove: false,
         spaceBetween: 20,
         slidesPerGroup: 1,
         autoplay: {
@@ -122,8 +123,27 @@ document.addEventListener('DOMContentLoaded', () => {
             targetElement.scrollIntoView({ 
                 behavior: 'smooth',
                 block: 'start' 
-            });
-        }
+                });
+            }
+        });
     });
-});
+
+    /* Открытие фильтра */
+    const buttonsFilter = document.querySelectorAll('.filter--input__button');
+    buttonsFilter.forEach( (el, index) => {
+        let select = el.closest('.filter--input__select');
+        let chars = select.querySelector('.filter--select__body');
+        el.addEventListener('click', () => {
+            el.classList.toggle('active');
+            chars.classList.toggle('filter-open');
+        })
+    });
+
+    const checkboxFiltes = document.querySelectorAll('.filter--select__char');
+    checkboxFiltes.forEach( (el, index) => {
+        let checkboxContainer = el.closest('.checkbox__container--filter');
+        el.addEventListener('click', () => {
+            checkboxContainer.classList.toggle('checked');
+        })
+    });
 })
