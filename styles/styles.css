@@ -147,6 +147,11 @@ ul.list-triangle li {
     background: linear-gradient(180deg, transparent 35%, rgba(0, 128, 128, 0.8) 100%);
 }
 
+.background-main-green {
+    background-color: #008080;
+    background: linear-gradient(180deg, transparent 60%, rgba(0, 128, 128, 0.8) 100%);
+}
+
 .btn {
     border-radius: 50px;
     border: none;
@@ -2515,6 +2520,51 @@ input[type="checkbox"].filter--select__char:checked {
     }
 }
 
+/* Кейсы */
+.cases-container {
+    margin-top: 30px;
+}
+
+.cases__text {
+    font-size: 20px;
+}
+
+/* Доставка и оплата */
+.delivery-blocks {
+    margin: 60px 0 70px;
+}
+
+.delivery-block {
+    padding: 45px 30px 35px 25px;
+    background-color: #fff;
+    box-shadow: var(--shadow--green);
+    border-radius: 10px;
+}
+
+.delivery-block__title {
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.delivery__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.delivery-block__text {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Страница "Чаво" */
+.faq-page {
+    margin: 70px 80px 20px;
+
+    & .dropwodn__detail {
+        color: #7e7e7e;
+    }
+}
+
 /*Медиа-запросы*/
 @media (width > 1200px) {
     .container {
@@ -3008,6 +3058,47 @@ input[type="checkbox"].filter--select__char:checked {
 
     .filter--block__name {
         font-size: 18px;
+    }
+
+    /* Кейсы */
+    .cases-container {
+        margin-top: 55px;
+    }
+
+    .cases__text {
+        font-size: 24px;
+    }
+
+    /* Доставка и оплата */
+    .delivery-blocks {
+        margin: 60px 0 80px;
+    }
+
+    .delivery-block {
+        padding: 65px 30px 50px 60px;
+        background-color: #fff;
+        box-shadow: var(--shadow--green);
+        border-radius: 10px;
+    }
+
+    .delivery-block__title {
+        padding-left: 50px;
+        font-size: 20px;
+    }
+
+    .delivery__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .delivery-block__text {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    /* Страница "Чаво" */
+    .faq-page {
+        margin: 60px 60px 30px;
     }
 }
 
@@ -4060,7 +4151,61 @@ input[type="checkbox"].filter--select__char:checked {
         & .form-engineer__picture {
             width: 40%;
         }
+    }
 
+    /*Кейсы*/
+    .cases__title {
+        margin-top: 30px;
+    }
+
+    .cases__text {
+        text-align: center;
+        font-size: 16px;
+    } 
+
+    /* Доставка */
+    .delivery-blocks {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    .delivery-block {
+        padding: 30px 20px 20px 20px;
+    }
+
+    .delivery__title {
+        margin-top: 30px;
+    }
+
+    .delivery-block__title {
+        padding-left: 0;
+        font-size: 14px;
+    }
+
+    .delivery-block__title::before {
+        top: -30px;
+        left: 50%;
+        transform: rotate(90deg) translateY(50%);
+    }
+
+    .delivery-block__text {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .delivery__subtitle {
+        font-size: 16px;
+    }
+
+    /* Страница "Чаво" */
+    .faq-page {
+        margin: inherit;
+        margin-top: 30px;
+    }
+
+    .faq__title {
+        margin-top: 30px;
     }
 }
 
