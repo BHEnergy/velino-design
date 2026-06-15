@@ -771,6 +771,10 @@ a.breadcrumbs--item:hover {
     display: grid;
     grid-template-columns: 50% 50%;
 
+    & a.btn--white {
+        color: var(--primary-color);
+    }
+
     & :last-child {
         margin-left: 25px;
     }
@@ -2565,6 +2569,39 @@ input[type="checkbox"].filter--select__char:checked {
     }
 }
 
+/* Новости */
+.news--container {
+    margin: 60px 0 70px;
+}
+
+.news-block {
+    padding: 50px 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow--green);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news__date {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.news__preview {
+    font-size: 14px;
+}
+
+.news__link {
+    text-align: end;
+}
+
+.news--footer {
+    display: flex;
+    justify-content: center;
+}
+
 /*Медиа-запросы*/
 @media (width > 1200px) {
     .container {
@@ -3100,6 +3137,21 @@ input[type="checkbox"].filter--select__char:checked {
     .faq-page {
         margin: 60px 60px 30px;
     }
+
+    /* Новости */
+    .news__date {
+        font-size: 16px;
+    }
+
+    .news__preview {
+        font-size: 16px;
+    }
+
+    .news--footer {
+        & .btn {
+            padding: 25px 20px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -3494,7 +3546,7 @@ input[type="checkbox"].filter--select__char:checked {
     }
 
     .js-init-review-slider {
-        min-height: 395px;
+        min-height: 435px;
     }
 
     .review-info__company {
@@ -3512,6 +3564,8 @@ input[type="checkbox"].filter--select__char:checked {
 
     .review-info__link {
         text-align: center;
+        margin-top: 60px;
+        font-size: 12px;
     }
 
     .footer__menu {
@@ -4206,6 +4260,32 @@ input[type="checkbox"].filter--select__char:checked {
 
     .faq__title {
         margin-top: 30px;
+    }
+
+    /* Новости */
+    .news__title {
+        margin-top: 30px;
+    }
+
+    .news--container {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        gap: 15px;
+    }
+
+    .news-block {
+        align-items: center;
+        padding: 40px 30px;
+        gap: 15px;
+    }
+
+    .news__preview {
+        text-align: center;
+    }
+
+    .news__link.link--default {
+        font-size: 14px;
     }
 }
 
