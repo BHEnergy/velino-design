@@ -78,6 +78,13 @@ ul.dot-before li::before {
     font-weight: 700;
 }
 
+ul.list li::before {
+    content: "-";
+    padding-right: 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
 ul.list-triangle li {
     padding-left: 40px;
     position: relative;
@@ -325,6 +332,10 @@ ul.check-mark li::before {
     width: 24px;
     text-align: center;
     padding-right: 8px;
+}
+
+ul.check-mark.black li::before {
+    filter: brightness(0);
 }
 
 .input--default, .input--medium  {
@@ -1884,12 +1895,12 @@ a.breadcrumbs--item:hover {
     margin-top: 25px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .section__tag {
-    padding: 10px 16px;
+    padding: 10px 25px;
     font-size: 14px;
     font-weight: 600;
     color: var(--primary-color);
@@ -2430,7 +2441,7 @@ input[type="checkbox"].filter--select__char:checked {
 .banner--map__tags {
     display: flex;
     flex-direction: row;
-    gap: 10px 20px;
+    gap: 15px 20px;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
@@ -2439,7 +2450,7 @@ input[type="checkbox"].filter--select__char:checked {
     color: var(--primary-color);
     border-radius: 50px;
     box-shadow: var(--shadow--green);
-    padding: 13px 20px;
+    padding: 13px 25px;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
@@ -2881,7 +2892,6 @@ input[type="checkbox"].filter--select__char:checked {
 
     .section__tags {
         margin-top: 30px;
-        gap: 15px;
         max-width: 640px;
     }
 
