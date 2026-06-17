@@ -413,7 +413,7 @@ ul.check-mark.black li::before {
 }
 
 a.breadcrumbs--item {
-    text-decoration-line: underline;
+    cursor: pointer;
     transition: 0.1s all ease-in-out;
 }
 
@@ -2291,7 +2291,7 @@ input[type="checkbox"].filter--select__char:checked {
 
 .difference__footer {
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     color: black;
     font-size: 10px;
 
@@ -2612,6 +2612,68 @@ input[type="checkbox"].filter--select__char:checked {
     display: flex;
     justify-content: center;
 }
+
+/* Страница контакты */
+.banner--contacts {
+    background: #fff;
+    box-shadow: var(--shadow--green);
+    padding: 60px 50px;
+    display: grid;
+    grid-template-columns: 0.55fr 0.5fr;
+    gap: 40px;
+    margin: 70px 0;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.banner--contacts__info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.banner--contacts__text {
+    position: relative;
+    font-size: 16px;
+    padding-left: 40px;
+}
+
+/* О компании */
+.about-info {
+    display: grid;
+    grid-template-columns: 0.5fr 0.45fr;
+    justify-content: space-between;
+}
+
+.about__subtitle {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.about-feachers {
+    margin: 50px 100px 70px;
+}
+
+.about-feacher {
+    text-align: center;
+    color: var(--second-primary);
+    text-transform: uppercase;
+}
+
+.about-feacher__number {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.about-feacher__text {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+}
+
 
 /*Медиа-запросы*/
 @media (width > 1200px) {
@@ -2997,6 +3059,10 @@ input[type="checkbox"].filter--select__char:checked {
         }
     }
 
+    .difference__footer {
+        bottom: 30px;
+    }
+
     .faq-block {
         margin: 80px 60px 30px;
     }
@@ -3161,6 +3227,42 @@ input[type="checkbox"].filter--select__char:checked {
         & .btn {
             padding: 25px 20px;
         }
+    }
+
+    /* Контакты */
+    .banner--contacts {
+        padding: 90px 60px;
+        grid-template-columns: 0.5fr 0.5fr;
+    }
+
+    .banner--contacts__text {
+        font-size: 18px;
+        padding-left: 50px;
+    }
+
+    .banner--contacts__image img {
+        width: 100%;
+    }
+
+    /* О компании */
+    .about-info {
+        grid-template-columns: 0.5fr 0.5fr;
+    }
+
+    .about-feachers {
+        margin: 80px 60px;
+    }
+
+    .about__subtitle {
+        font-size: 24px;
+    }
+
+    .about-feacher__number {
+        font-size: 60px;
+    }
+
+    .about-feacher__text {
+        font-size: 18px;
     }
 }
 
@@ -4296,6 +4398,33 @@ input[type="checkbox"].filter--select__char:checked {
 
     .news__link.link--default {
         font-size: 14px;
+    }
+
+    /* Контакты */
+    .contacts__title {
+        margin-top: 30px;
+    }
+
+    .banner--contacts {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 30px 0 50px;
+        padding: 20px 50px 45px;
+        gap: 20px;
+    }
+
+    .banner--contacts__info {
+        gap: 20px;
+    }
+
+    .banner--contacts__text {
+        font-size: 10px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .banner--contacts__text::before {
+        left: -50px;
     }
 }
 
