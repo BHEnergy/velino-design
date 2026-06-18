@@ -143,19 +143,19 @@ ul.list-triangle li {
     background: linear-gradient(
         180deg,
         transparent 15%,
-        rgba(52, 153, 153, 0.8) 30%,
+        rgba(52, 153, 153, 0.8) 35%,
         rgba(52, 153, 153, 0.8) 100%
 
     );
 }
 
 .background-bm-green {
-    background-color: #008080;
+    background: #349999;
     background: linear-gradient(180deg, transparent 35%, rgba(0, 128, 128, 0.8) 100%);
 }
 
 .background-main-green {
-    background-color: #008080;
+    background: #349999;
     background: linear-gradient(180deg, transparent 60%, rgba(0, 128, 128, 0.8) 100%);
 }
 
@@ -253,6 +253,13 @@ ul.list-triangle li {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+}
+
+.title-triangle:has(p.subtitle) {
+    &::before {
+        transform: translateY(-60%);
+        top: 25%;
+    }
 }
 
 .small-triangle::before {
@@ -864,7 +871,7 @@ a.breadcrumbs--item:hover {
 }
 
 .info__title {
-    margin: 16px 0;
+    margin: 20px 0;
     font-size: 16px;
     color: var(--second-primary);
     text-align: center;
@@ -887,7 +894,7 @@ a.breadcrumbs--item:hover {
     font-weight: 400;
 }
 
-.info__extended {
+.feacher__extended, .info__extended {
     font-size: 12px;
     color: #7E7E7E;
     font-weight: 700;
@@ -918,6 +925,7 @@ a.breadcrumbs--item:hover {
 .solo-info__block .btn {
     padding: 14px 40px;
 }
+
 /*Продукция*/
 
 .products__blocks {
@@ -2219,7 +2227,7 @@ input[type="checkbox"].filter--select__char:checked {
 
 .difference__block {
     background-color: #fff;
-    padding: 45px 40px 40px 50px;
+    padding: 60px 40px 70px 50px;
     border-radius: 10px;
     position: relative;
     box-shadow: var(--shadow--green);
@@ -2287,11 +2295,12 @@ input[type="checkbox"].filter--select__char:checked {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 50px 40px 70px 40px;
 }
 
 .difference__footer {
     position: absolute;
-    bottom: 15px;
+    bottom: 30px;
     color: black;
     font-size: 10px;
 
@@ -2674,6 +2683,23 @@ input[type="checkbox"].filter--select__char:checked {
     line-height: 1;
 }
 
+.feacher__extendeds {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Сервисный центр */
+.service__blocks {
+    margin: 60px 0 70px;
+}
+
+.service--feacher {
+    justify-content: space-between;
+}
 
 /*Медиа-запросы*/
 @media (width > 1200px) {
@@ -3039,20 +3065,34 @@ input[type="checkbox"].filter--select__char:checked {
         font-size: 18px;
     }
 
+    .difference__title {
+        margin-bottom: 0;
+    }
+
     .difference__title::before {
         left: -60px;
     }
 
     .difference__block ul {
+        margin-top: 0;
         font-size: 16px;
+        gap: 30px;
     }
 
     .difference__block {
+        display: flex;
+        flex-direction: column;
         padding: 75px 60px 62px 60px;
+        gap: 30px;
+    }
+
+    .difference-separator {
+        margin-top: auto;
     }
 
     .difference__block.form {
         height: 100%;
+        padding: 75px 60px 65px 60px;
 
         & .form-feedback__container {
             margin-top: auto;
@@ -3132,6 +3172,10 @@ input[type="checkbox"].filter--select__char:checked {
         & .feacher__description {
             font-size: 18px;
         }
+    }
+
+    .feacher__extended, .info__extended {
+        font-size: 14px;
     }
 
     .feacher__item--big {
@@ -3246,7 +3290,7 @@ input[type="checkbox"].filter--select__char:checked {
 
     /* О компании */
     .about-info {
-        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-columns: 0.4fr 0.5fr;
     }
 
     .about-feachers {
@@ -3264,6 +3308,15 @@ input[type="checkbox"].filter--select__char:checked {
     .about-feacher__text {
         font-size: 18px;
     }
+
+    .feacher__extendeds {
+        margin-top: 25px;
+    }   
+
+    /* Сервисный центр */
+    .service--feacher {
+        padding: 40px  40px 50px 60px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3280,6 +3333,7 @@ input[type="checkbox"].filter--select__char:checked {
     }
 
     .subtitle {
+        margin-top: 20px;
         font-size: 16px;
     }
 
@@ -4125,7 +4179,7 @@ input[type="checkbox"].filter--select__char:checked {
         padding: 30px 15px 30px;
     }
 
-    .info__extended {
+    .feacher__extended, .info__extended {
         font-size: 10px;
     }
 
@@ -4425,6 +4479,38 @@ input[type="checkbox"].filter--select__char:checked {
 
     .banner--contacts__text::before {
         left: -50px;
+    }
+
+    /* О компании */
+    .about-info {
+        margin: 30px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .about-info__image {
+        display: none;
+    }
+
+    .about-feachers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px auto;
+        gap: 20px;
+    }
+
+    .feacher__extendeds {
+        margin-top: 10px;
+    }
+
+    /* Сервисный центр */
+    .service__title {
+        margin-top: 30px;
+    }
+    
+    .service__blocks {
+        margin: 30px 0;
     }
 }
 
