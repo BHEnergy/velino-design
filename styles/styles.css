@@ -67,7 +67,7 @@ input[type=checkbox]:checked::before {
     transform: translateY(-50%);
 }
 
-b {
+b, strong {
     font-weight: 700;
 }
 
