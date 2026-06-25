@@ -232,6 +232,12 @@ ul.list-triangle li {
     gap: 20px;
 }
 
+.stage-5 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    gap: 10px;
+}
+
 .title {
     text-transform: uppercase;
     position: relative;
@@ -844,7 +850,7 @@ a.breadcrumbs--item:hover {
 }
 
 .info__block--feacher {
-    padding: 30px 34px 40px;
+    padding: 30px 30px 40px;
     border-radius: 10px;
     background: #fff;
     box-shadow: 0px 0px 15px var(--primary-color);
@@ -886,6 +892,27 @@ a.breadcrumbs--item:hover {
     width: 100%;
     & img {
         width:100%;
+    }
+}
+
+/*Расширеные*/
+.stage-5.info__blocks { 
+    & .info__block--feacher {
+        padding: 25px 20px 30px;
+    }
+
+    & .info__title {
+        min-height: 70px;
+        margin-bottom: 0;
+    }
+
+    & .info__description {
+        margin-left: 15px;
+    }
+
+    & .info__picture {
+        height: 70px;
+        width: 70px;
     }
 }
 
@@ -2876,6 +2903,10 @@ input[type="checkbox"].filter--select__char:checked {
         font-size: 24px;
     }
 
+    .stage-5 {
+        gap: 13px;
+    }
+
     .link--default {
         font-size: 16px;
     }
@@ -3202,6 +3233,22 @@ input[type="checkbox"].filter--select__char:checked {
 
         & img {
             width:100%;
+        }
+    }
+
+    /*Расширеные*/
+    .stage-5.info__blocks { 
+        & .info__block--feacher {
+            padding: 30px 10px 30px;
+        }
+
+        & .info__description {
+            margin-left: 20px;
+        }
+
+        & .info__picture {
+            height: 75px;
+            width: 75px;
         }
     }
 
@@ -3551,6 +3598,17 @@ input[type="checkbox"].filter--select__char:checked {
         gap: 15px;
     }
 
+    .stage-5 {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 10px 15px;
+    }
+
+    .stage-5 .info__block--feacher:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 6px);
+    }
+
     .btn--big {
         font-size: 12px;
     }
@@ -3634,6 +3692,27 @@ input[type="checkbox"].filter--select__char:checked {
 
     .info__blocks {
         margin-top: 40px;
+    }
+
+        /*Расширеные*/
+    .stage-5.info__blocks { 
+        & .info__block--feacher {
+            padding: 30px 17px 30px;
+        }
+
+        & .info__title {
+            min-height: unset;
+            margin-bottom: 20px;
+        }
+
+        & .info__description {
+            margin-left: unset;
+        }
+
+        & .info__picture {
+            height: 60px;
+            width: 60px;
+        }
     }
 
     .info__blocks--main {
