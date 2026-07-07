@@ -146,4 +146,52 @@ document.addEventListener('DOMContentLoaded', () => {
             checkboxContainer.classList.toggle('checked');
         })
     });
+
+    /* Табы */
+    const tabsArray = document.querySelectorAll('.tab');
+    tabsArray.forEach( (el, index) => {
+        el.addEventListener('click', () => {
+            let selectTab = el;
+            let currentTab = document.querySelector('.tab--active');
+            let currentTabContainer = document.querySelector('.tab-container--active');
+            let selectTabContainer = document.querySelector(`.tab-container[data-tab="${el.dataset.tab}"]`);
+
+            currentTab.classList.remove('tab--active');
+            currentTabContainer.classList.remove('tab-container--active');
+            selectTab.classList.add('tab--active');
+            selectTabContainer.classList.add('tab-container--active');
+        })
+    });
+
+    /* Табы в ЛК*/
+    const tabsLkArray = document.querySelectorAll('.tab-orders');
+    tabsLkArray.forEach( (el, index) => {
+        el.addEventListener('click', () => {
+            let selectTab = el;
+            let currentTab = document.querySelector('.tab-orders--active');
+            let currentTabContainer = document.querySelector('.tab-orders-container--active');
+            let selectTabContainer = document.querySelector(`.tab-orders-container[data-tab="${el.dataset.tab}"]`);
+
+            currentTab.classList.remove('tab-orders--active');
+            currentTabContainer.classList.remove('tab-orders-container--active');
+            selectTab.classList.add('tab-orders--active');
+            selectTabContainer.classList.add('tab-orders-container--active');
+        })
+    });
+
+
+    /* Пароли */
+    const passwordButton = document.querySelectorAll('.password-button');
+    passwordButton.forEach( (el, index) => {
+        el.addEventListener('click', () => {
+            el.classList.toggle('open');
+            let passContainer = el.closest('.password-container');
+            let input = passContainer.querySelector('input');
+            if(input.type != "text") {
+                input.type = 'text';
+            } else {
+                input.type = 'password';
+            }
+        });
+    })
 })

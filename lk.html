@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/styles.css?v=2" rel="stylesheet" />
+    <link href="./styles/swiper.css" rel="stylesheet" />
+    <link href="./styles/swiper.min.css" rel="stylesheet" />
+    <script src="./scripts/script.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.min.js" type="text/javascript"></script>
+    <script
+      src="./scripts/swiper-bundle.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./scripts/gsap.min.js" type="text/javascript"></script>
+    <script src="./scripts/mask.js" type="text/javascript"></script>
+    <title>Личный кабинет партнёра</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="menu__upper">
+          <div id="mobileMenu" class="mobile__menu">
+            <div class="menu__navbar--mobile">
+              <a href="#" class="navbar--mobile__item">Каталог</a>
+              <a href="#" class="navbar--mobile__item">О компании</a>
+              <a href="#" class="navbar--mobile__item">Акции</a>
+              <a href="#" class="navbar--mobile__item">Доставка и оплата</a>
+              <a href="#" class="navbar--mobile__item">Сервисный центр</a>
+              <a href="#" class="navbar--mobile__item">Статьи</a>
+              <a href="#" class="navbar--mobile__item">Документация</a>
+              <a href="#" class="navbar--mobile__item">Контакты</a>
+            </div>
+          </div>
+          <div class="menu__row container">
+            <img class="menu__logo" src="./source/logo.png" />
+            <div class="menu__navbar">
+              <ul>
+                <li class="current-position">
+                  <a href="#">Каталог</a>
+                </li>
+                <li>О компании</li>
+                <li>Акции</li>
+                <li>Доставка и оплата</li>
+                <li>Сервисный центр</li>
+                <li>Статьи</li>
+                <li>Документация</li>
+                <li>Контакты</li>
+              </ul>
+            </div>
+            <div class="menu__socials">
+              <img src="./source/icons/tg-icon.svg" />
+              <img src="./source/icons/wa-icon.svg" />
+              <img src="./source/icons/mail-icon.svg" />
+              <!-- У кнопок будет задан параметр, который будет отвечать за формы -->
+              <button class="btn btn--default menu__call" data->
+                Заказать звонок
+              </button>
+            </div>
+            <div class="menu__panel--mobile">
+              <img src="./source/icons/like-icon-white.svg" />
+              <img src="./source/icons/cart-white-icon.svg" />
+              <img src="./source/icons/lk-icon-white.svg" />
+              <button
+                id="burger-button"
+                class="burger-button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+              >
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="menu__down">
+          <div class="menu__row container">
+            <div class="menu__info">
+              <div class="menu__region">Москва</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__schedule">Пн-пт: 9:00-18:00</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__phone">8 (800) 000-00-00</div>
+            </div>
+            <div class="menu__control">
+              <div class="menu__search">
+                <input placeholder="Поиск товара по названию..." />
+              </div>
+              <div class="menu__panel">
+                <img src="./source/icons/like-icon.svg" />
+                <img src="./source/icons/cart-icon.svg" />
+                <img src="./source/icons/lk-icon.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main background-main-green">
+        <!-- Хлебные крошки -->
+        <div class = "container">
+          <div class="breadcrumbs">
+            <a class="breadcrumbs--item" href="/">Главная</a>
+            <span class = "breadcrumbs--separator">/</span>
+            <span>Личный кабинет партнёра</span>
+          </div>
+        </div>
+
+        <!-- Основная часть -->
+        <div class = "container">
+            <div class = "lk-container">
+                <div class = "tabs lk-tabs">
+                    <div class = "tab tab--active" data-tab="info">
+                        Инфо о партнёре
+                    </div>
+                    <div class = "tab" data-tab="price">
+                        Актуальный прайс
+                    </div>
+                    <div class = "tab" data-tab="models">
+                        3D модели
+                    </div>
+                    <div class = "tab" data-tab="orders">
+                        Заказы
+                    </div>
+                    <div class = "tab" data-tab="basket">
+                        Корзина
+                        <div class = "total-items">
+                          2
+                        </div>
+                    </div>
+                </div>
+                <div class = "tab-container tab-container--active lk-tab" data-tab="info">
+                    <div class = "lk-company">
+                      <div class = "company-info">
+                        <p class = "red--title company-info__title">
+                          О компании
+                        </p>
+                        <p class = "company-info__subtitle">
+                          Основная информация о партнёре
+                        </p>
+                        <table class = "company-data">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <p class = "company-data__title">Название компании</p>
+                                <p class = "company-data__text">ООО “ТехноЛидер”</p>
+                              </td>
+                              <td>
+                                <p class = "company-data__title">ИНН</p>
+                                <p class = "company-data__text">11111111</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class = "company-data__title">Контактное лицо</p>
+                                <p class = "company-data__text">Иванов Иван Иванович</p>
+                              </td>
+                              <td>
+                                <p class = "company-data__title">Должность</p>
+                                <p class = "company-data__text">Директор по закупкам</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class = "company-data__title">Email контактного лица</p>
+                                <p class = "company-data__text">ivanov@technolead.ru</p>
+                              </td>
+                              <td>
+                                <p class = "company-data__title">Телефон контактного лица</p>
+                                <p class = "company-data__text">+7 (999) 123-45-67</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class = "company-data__title">Email компании</p>
+                                <p class = "company-data__text">info@technolead.ru</p>
+                              </td>
+                              <td>
+                                <p class = "company-data__title">Телефон компании</p>
+                                <p class = "company-data__text">+7 (999) 000-00-00</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class = "company-data__title">Адрес доставки</p>
+                                <p class = "company-data__text">г. Москва, ул. Московская, д. 1, стр. 1</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <button id = "redact" type="button" class = "btn lk-btn btn--big btn--grey">Редактировать</button>
+                      </div>
+                      <div class = "company-status">
+                        <p class = "red--title company-info__title">
+                          Статус сотрудничества
+                        </p>
+                        <p class = "company-info__subtitle">
+                          Техническая информация
+                        </p>
+                        <table class = "company-data">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <p class = "company-data__title">Группа</p>
+                                <p class = "company-data__text company-data__status confirmed">Подтвержденные</p>
+                              </td>
+                              <td>
+                                <p class = "company-data__title">Дата регистрации</p>
+                                <p class = "company-data__text">01.01.2021</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class = "company-help">
+                      <div class = "company-help__info">
+                        <p class = "red--title small-triangle company-help__title">Нужна помощь?</p>
+                        <p class = "company-help__subtitle">Свяжитесь с нами</p>
+                      </div>
+                      <button type="button" class = "btn lk-btn btn--big btn--green" data-modal="feedback">Написать нам</button>
+                    </div>
+                </div>
+                <div class = "tab-container lk-tab" data-tab="price">
+                    <div class = "lk-price">
+                      <div class = "lk-price__catalog">
+                        <div class = "lk-price__info">
+                          <img src = "./source/note.png">
+                          <p class = "lk-price__text">Каталог продукции</p>
+                        </div>
+                        <div class = "lk-price__buttons">
+                          <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                          <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                        </div>
+                      </div>
+                      <div class = "lk-price__prices">
+                        <div class = "lk-price__info">
+                          <img src = "./source/price.png">
+                          <p class = "lk-price__text">Прайс</p>
+                        </div>
+                        <div class = "lk-price__buttons">
+                          <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                          <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class = "tab-container lk-tab" data-tab="models">
+                    <table class = "lk-models">
+                      <thead>
+                        <tr>
+                          <td class = "lk-models__title">
+                            Наименование
+                          </td>
+                          <td class = "lk-models__title">
+                            Категория
+                          </td>
+                          <td class = "lk-models__title">
+                            Действие
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class = "model__text">
+                            Вентиляционная установка ВУ-500
+                          </td>
+                          <td class = "model__text">
+                            Вентиляция
+                          </td>
+                          <td class = "model__buttons">
+                            <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                            <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class = "model__text">
+                            Воздуховод гибкий 200мм
+                          </td>
+                          <td class = "model__text">
+                            Комплектующие
+                          </td>
+                          <td class = "model__buttons">
+                            <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                            <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class = "model__text">
+                            Фильтр воздушный F7
+                          </td>
+                          <td class = "model__text">
+                            Фильтры
+                          </td>
+                          <td class = "model__buttons">
+                            <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                            <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class = "model__text">
+                            Вентилятор канальный
+                          </td>
+                          <td class = "model__text">
+                            Вентиляторы
+                          </td>
+                          <td class = "model__buttons">
+                            <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                            <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class = "model__text">
+                            Автоматика управления
+                          </td>
+                          <td class = "model__text">
+                            Автоматика
+                          </td>
+                          <td class = "model__buttons">
+                            <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                            <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class = "model__text">
+                            Калорифер водяной
+                          </td>
+                          <td class = "model__text">
+                            Теплообменники
+                          </td>
+                          <td class = "model__buttons">
+                            <a href = "#" class = "btn lk-btn btn--green">Посмотреть</a>
+                            <a href = "#" class = "btn lk-btn btn--grey">Скачать</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <div class = "tab-container lk-tab" data-tab="orders">
+                  <div class = "lk-orders">
+                    <div class = "tabs-lk">
+                    <div class = "tab-lk__orders tab-orders tab-orders--active" data-tab="orders-in-work">
+                      <p class = "tab-lk__orders__title">
+                        Актуальные
+                      </p>
+                      <p class = "tab-lk__orders__number">
+                        2
+                      </p>
+                    </div>
+                    <div class = "tab-lk__orders tab-orders" data-tab="orders-сomplete">
+                      <p class = "tab-lk__orders__title">
+                        История заказов
+                      </p>
+                      <p class = "tab-lk__orders__number">
+                        2
+                      </p>
+                    </div>
+                  </div>
+                  <div class = "tab-orders-container tab-orders-container--active" data-tab="orders-in-work">
+                    <table class = "lk-orders__table">
+                      <thead>
+                        <tr>
+                          <td class = "lk-orders__title">
+                            № Заказа
+                          </td>
+                          <td class = "lk-orders__title">
+                            Дата
+                          </td>
+                          <td class = "lk-orders__title">
+                            Состав
+                          </td>
+                          <td class = "lk-orders__title">
+                            Сумма
+                          </td>
+                          <td class = "lk-orders__title">
+                            Статус
+                          </td>
+                          <td class = "lk-orders__title">
+                            Действия
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class = "lk-orders__text">
+                            ORD-2024-001
+                          </td>
+                          <td class = "lk-orders__text">
+                            01.01.2026
+                          </td>
+                          <td class = "lk-orders__text">
+                            Вентиляционная установка ВУ-500 (2 шт.)
+                          </td>
+                          <td class = "lk-orders__text">
+                            290 000 ₽
+                          </td>
+                          <td>
+                            <p class = "lk-orders__status in-work">
+                              В обработке
+                            </p>
+                          </td>
+                          <td class = "lk-orders__text">
+                            <a href = "#">Повторить</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class = "lk-orders__text">
+                            ORD-2024-002
+                          </td>
+                          <td class = "lk-orders__text">
+                            02.01.2026
+                          </td>
+                          <td class = "lk-orders__text">
+                            Воздуховод гибкий 200мм (50 шт.)
+                          </td>
+                          <td class = "lk-orders__text">
+                            42 500 ₽
+                          </td>
+                          <td>
+                            <p class = "lk-orders__status payment">
+                              Оплачен
+                            </p>
+                          </td>
+                          <td class = "lk-orders__text">
+                            <a href = "#">Повторить</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class = "tab-orders-container" data-tab="orders-сomplete">
+                    <table class = "lk-orders__table">
+                      <thead>
+                        <tr>
+                          <td class = "lk-orders__title">
+                            № Заказа
+                          </td>
+                          <td class = "lk-orders__title">
+                            Дата
+                          </td>
+                          <td class = "lk-orders__title">
+                            Состав
+                          </td>
+                          <td class = "lk-orders__title">
+                            Сумма
+                          </td>
+                          <td class = "lk-orders__title">
+                            Статус
+                          </td>
+                          <td class = "lk-orders__title">
+                            Действия
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class = "lk-orders__text">
+                            ORD-2024-001
+                          </td>
+                          <td class = "lk-orders__text">
+                            01.01.2026
+                          </td>
+                          <td class = "lk-orders__text">
+                            Вентиляционная установка ВУ-500 (2 шт.)
+                          </td>
+                          <td class = "lk-orders__text">
+                            290 000 ₽
+                          </td>
+                          <td>
+                            <p class = "lk-orders__status complete">
+                              Выполнен
+                            </p>
+                          </td>
+                          <td class = "lk-orders__text">
+                            <a href = "#">Повторить</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class = "lk-orders__text">
+                            ORD-2024-002
+                          </td>
+                          <td class = "lk-orders__text">
+                            02.01.2026
+                          </td>
+                          <td class = "lk-orders__text">
+                            Воздуховод гибкий 200мм (50 шт.)
+                          </td>
+                          <td class = "lk-orders__text">
+                            42 500 ₽
+                          </td>
+                          <td>
+                            <p class = "lk-orders__status complete">
+                              Выполнен
+                            </p>
+                          </td>
+                          <td class = "lk-orders__text">
+                            <a href = "#">Повторить</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                </div>
+                <div class = "tab-container lk-tab" data-tab="basket">
+                    <div class = "lk-basket">
+                      <div class = "basket-body">
+                        <p class = "red--title basket-body__title">
+                          Заказ ORD-2024-001
+                        </p>
+                        <table class = "basket-table">
+                          <thead>
+                            <tr>
+                              <td class = "basket-table__title">Cостав</td>
+                              <td class = "basket-table__title">Цена</td>
+                              <td class = "basket-table__title">Количество</td>
+                              <td class = "basket-table__title">Сумма</td>
+                              <td></td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class = "basket-table__text">Вентиляционная установка ВУ-500</td>
+                              <td class = "basket-table__text" data-value="145000">145 000 ₽ / шт.</td>
+                              <td>
+                                <div class = "basket-table__controls">
+                                  <button class = "basket-button basket-minus">-</button>
+                                  <input class = "basket-input basket-value" value="1">
+                                  <button class = "basket-button basket-plus">+</button>
+                                </div>
+                              </td>
+                              <td class = "basket-table__sum">145 000 ₽</td>
+                              <td>
+                                <button class = "delete-item">
+                                  <img src = "./source/trashbox.png">
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class = "basket-table__text">Воздуховод гибкий 200мм</td>
+                              <td class = "basket-table__text" data-value="850">850 ₽ / шт.</td>
+                              <td>
+                                <div class = "basket-table__controls">
+                                  <button class = "basket-button basket-minus">-</button>
+                                  <input class = "basket-input basket-value" value="2">
+                                  <button class = "basket-button basket-plus">+</button>
+                                </div>
+                              </td>
+                              <td class = "basket-table__text">1 700 ₽</td>
+                              <td>
+                                <button class = "delete-item">
+                                  <img src = "./source/trashbox.png">
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class = "basket-result">
+                        <p class = "red--title basket-result__title">
+                          Итого:
+                        </p>
+                        <table class = "result-table">
+                          <tbody>
+                            <tr>
+                              <td class = "result-table__name">Позиций:</td>
+                              <td class = "result-table__value">2</td>
+                            </tr>
+                            <tr>
+                              <td class = "result-table__name">Количество:</td>
+                              <td class = "result-table__value">3 шт.</td>
+                            </tr>
+                            <tr>
+                              <td class = "result-table__name">Сумма без НДС:</td>
+                              <td class = "result-table__value">146 700 ₽ </td>
+                            </tr>
+                            <tr>
+                              <td class = "result-data__text">Итого:</td>
+                              <td class = "result-data__sum">146 700 ₽</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <button class = "btn btn--green lk-btn btn--confirm">Оформить запрос на счет</button>
+                        <div class = "result-data__subtext">
+                          Заказ будет создан в ЛК и отправлен менеджеру 
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class = "partner-info">
+                  <div class = "partner-info__status">
+                    Подтвержденный дилер
+                  </div>
+                  <button class = "partner-info__notifications">
+                    <img src = "./source/pushes.png">
+                    <div class = "notifications">1</div>
+                  </button>  
+                  <div class = "partner-info__separator"></div>
+                  <div class = "partner-info__data">
+                    <p class = "partner-info__name">Иванов И.И.</p>
+                    <p class = "partner-info__company">ООО “ТехноЛидер”</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__body">
+            <div class="footer__info">
+              <img class="footer__logo" src="./source/logo.png" />
+              <div class="footer__phone">8 (800) 000-00-00</div>
+              <div class="footer__socials">
+                <img src="./source/icons/tg-icon.svg" />
+                <img src="./source/icons/wa-icon.svg" />
+                <img src="./source/icons/mail-icon.svg" />
+              </div>
+              <div class="footer__button">
+                <button class="btn btn--default footer__call" data->
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Каталог</li>
+                  <li>Акции</li>
+                  <li>Сервисный центр</li>
+                  <li>Доставка и оплата</li>
+                  <li>Гарантия и возврат</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Новости</li>
+                  <li>Статьи</li>
+                  <li>Документация</li>
+                  <li>Партнеры</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>О компании</li>
+                  <li>Вакансии</li>
+                  <li>Реквизиты</li>
+                  <li>Контакты</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__company">
+            <p>
+              ООО “Велино”,<br />
+              юридическая информация, юр адрес, ИНН, ОГРН, Лицензия,<br />
+              что-то еще такое, и вот такое, и БИК и Банк и что там еще надо.
+            </p>
+            <p>
+              © 2026 Velino. Все права защищены.<br />
+              Создание и продвижение сайта ООО “Маст”
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
