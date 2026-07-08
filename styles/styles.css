@@ -374,6 +374,9 @@ ul.check-mark.black li::before {
     font-size: 12px;
     font-weight: 600;
     box-shadow: 0px 4px 10px rgba(0, 128, 128, 0.3);
+}
+
+.input--default::placeholder {
     text-transform: uppercase;
 }
 
