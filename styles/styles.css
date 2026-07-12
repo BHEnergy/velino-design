@@ -3039,6 +3039,7 @@ input[type="checkbox"].filter--select__char:checked {
     text-align: center;
     border-radius: 10px;
     text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
 }
 
 .lk-company {
@@ -3056,6 +3057,7 @@ input[type="checkbox"].filter--select__char:checked {
     position: absolute;
     bottom: 0;
     right: 0;
+    font-size: 14px;
 }
 
 .company-info__title,
@@ -3458,6 +3460,12 @@ input[type="checkbox"].filter--select__char:checked {
     top: -100px;
     right: 0;
     align-items: center;
+}
+
+.partner-info__body {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 .partner-info__status {
@@ -5612,6 +5620,121 @@ input[type="checkbox"].filter--select__char:checked {
     .tabs-auth .tab {
         width: 120px;
         font-size: 10px;
+    }
+
+    /* Личный кабинет */
+    .lk-tabs {
+        position: relative;
+        width: 100%;
+
+        & .tab {
+            font-size: 10px;
+        }
+
+        & .tab.tab--active {
+            width: 100%;
+            position: absolute;
+            bottom: -30px;
+            border-radius: 10px;
+            z-index: 9;
+        }
+    }
+
+    .lk-tab {
+        width: calc(100% + 20px);
+        padding: 0 10px;
+    }
+
+    .lk-container {
+        margin-top: 100px;
+    }
+
+    .lk-company {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin: 45px 0 35px;
+    }
+
+    .company-info__subtitle {
+        text-align: center;
+    }
+
+    .company-data {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .company-data tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .company-data tr {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .company-data td {
+        text-align: center;
+    }
+
+    .company-data__text {
+        justify-content: center;
+    }
+
+    .company-info .lk-btn {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 50px;
+    }
+
+    .lk-price {
+        margin: 65px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .lk-price__catalog, .lk-price__prices {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .lk-price__buttons {
+        gap: 15px;
+    }
+
+    .partner-info {
+        flex-direction: row-reverse;
+        top: -70px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .partner-info__status {
+        font-size: 8px;
+    }
+
+    .partner-info__body {
+        gap: 10px;
+    }
+
+    .partner-info__name {
+        font-size: 14px;
+    }
+
+    .partner-info__company {
+        font-size: 12px;
+    }
+    
+
+    .company-help {
+        display: none;
     }
 }
 
