@@ -5629,14 +5629,16 @@ input[type="checkbox"].filter--select__char:checked {
 
         & .tab {
             font-size: 10px;
+            transition: unset;
         }
 
         & .tab.tab--active {
             width: 100%;
             position: absolute;
-            bottom: -30px;
+            bottom: -20px;
             border-radius: 10px;
             z-index: 9;
+            padding: 7px 0;
         }
     }
 
@@ -5709,6 +5711,160 @@ input[type="checkbox"].filter--select__char:checked {
         gap: 15px;
     }
 
+    .lk-models {
+        margin: 60px 0 40px;
+    }
+
+    .lk-orders__table thead, .lk-models thead {
+        display: none
+    }
+
+    .lk-models tbody tr {
+        display: grid;
+        grid-template: 'A B'
+        'C B';
+        align-items: center;
+        height: 100%;
+    }
+
+    .lk-models tbody tr td:first-child, .lk-models tbody tr td:last-child {
+        padding: 0;
+    }
+
+    .lk-models tbody tr td.model__text:first-child {
+        font-size: 14px;
+        grid-area: A;
+        width: 100%;
+    }
+
+    .lk-models tbody tr td.model__text:nth-child(2) {
+        font-size: 12px;
+        color: #7e7e7e;
+        grid-area: C;
+        width: 100%;
+    }
+
+    .lk-models tbody tr td.model__buttons {
+        grid-area: B;
+        gap: 5px;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 5px 0;
+    }
+
+    .lk-models tbody tr .lk-btn {
+        font-size: 10px;
+    }
+
+    .lk-orders {
+        margin: 45px 0;
+    }
+
+    .lk-orders__table tbody tr {
+        display: grid;
+        grid-template: 'A E'
+        'B B'
+        'C C'
+        'D F' / 0.8fr 0.2fr;
+        height: 100%;
+        justify-content: space-between;
+        justify-items: center;
+        gap: 5px;
+        padding: 15px 0;
+    }
+
+    .lk-orders__table tbody tr td.lk-orders__text:nth-child(n) {
+        width: 100%;
+    }
+
+    .lk-orders__table tbody tr td.lk-orders__text:nth-child(1) {
+        grid-area: A;
+        font-size: 14px;
+    }
+
+    .lk-orders__table tbody tr td.lk-orders__text:nth-child(2) {
+        grid-area: B;
+        font-size: 12px;
+        color: #7e7e7e;
+    }
+
+    .lk-orders__table tbody tr td.lk-orders__text:nth-child(3) {
+        grid-area: C;
+        font-size: 12px;
+        color: #7e7e7e;
+    } 
+
+    .lk-orders__table tbody tr td.lk-orders__text:nth-child(4) {
+        grid-area: D;
+        font-size: 12px;
+    }
+
+    .lk-orders__table tbody tr td.lk-orders__text:nth-child(5) {
+        grid-area: E;
+    }
+
+    .lk-orders__table tbody tr td.lk-orders__text:nth-child(6) {
+        grid-area: F;
+        width: auto;
+    }
+
+    .lk-orders__table tbody tr td:first-child, .lk-orders__table tbody tr td:last-child {
+        padding: 0;
+    }
+
+    .lk-basket {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .basket-table thead {
+        display: none;
+    }
+
+    .basket-table tbody tr  {
+        display: grid;
+        grid-template: 'A D'
+        'B B'
+        'C E' / 0.8fr 0.2fr;
+        height: 100%;
+        gap: 10px 0;
+        padding: 15px 0 25px;
+    }
+    
+    .basket-table tbody tr td:first-child, .basket-table tbody tr td:last-child {
+        padding: 0;
+    }
+
+    .basket-table tbody tr td:nth-child(1) {
+        grid-area: A;
+    }
+
+    .basket-table tbody tr td:nth-child(2) {
+        grid-area: B;
+        font-size: 12px;
+        color: #7e7e7e;
+    }
+
+    .basket-table tbody tr td:nth-child(3) {
+        grid-area: C;
+    }
+
+    .basket-table tbody tr td:nth-child(4) {
+        grid-area: D;
+        text-align: center;
+    }
+
+    .basket-table tbody tr td:nth-child(5) {
+        grid-area: E;
+        text-align: center;
+        align-self: center;
+    }
+
+    .result-table {
+        width: 70%;
+    }
+
     .partner-info {
         flex-direction: row-reverse;
         top: -70px;
@@ -5718,6 +5874,9 @@ input[type="checkbox"].filter--select__char:checked {
 
     .partner-info__status {
         font-size: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
     .partner-info__body {
@@ -5733,8 +5892,14 @@ input[type="checkbox"].filter--select__char:checked {
     }
     
 
+    .lk-tab[data-tab="info"] {
+        margin-bottom: 225px;
+    }
+
     .company-help {
-        display: none;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -25%;
     }
 }
 
