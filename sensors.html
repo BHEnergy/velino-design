@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link href="./styles/swiper.css" rel="stylesheet" />
+    <link href="./styles/swiper.min.css" rel="stylesheet" />
+    <script src="./scripts/script.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.js" type="text/javascript"></script>
+    <script src="./scripts/swiper.min.js" type="text/javascript"></script>
+    <script
+      src="./scripts/swiper-bundle.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./scripts/gsap.min.js" type="text/javascript"></script>
+    <script src="./scripts/mask.js" type="text/javascript"></script>
+    <title>Датчики и контроллеры</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="menu__upper">
+          <div id="mobileMenu" class="mobile__menu">
+            <div class="menu__navbar--mobile">
+              <a href="#" class="navbar--mobile__item">Каталог</a>
+              <a href="#" class="navbar--mobile__item">О компании</a>
+              <a href="#" class="navbar--mobile__item">Акции</a>
+              <a href="#" class="navbar--mobile__item">Доставка и оплата</a>
+              <a href="#" class="navbar--mobile__item">Сервисный центр</a>
+              <a href="#" class="navbar--mobile__item">Статьи</a>
+              <a href="#" class="navbar--mobile__item">Документация</a>
+              <a href="#" class="navbar--mobile__item">Контакты</a>
+            </div>
+          </div>
+          <div class="menu__row container">
+            <img class="menu__logo" src="./source/logo.png" />
+            <div class="menu__navbar">
+              <ul>
+                <li class="current-position">
+                  <a href="#">Каталог</a>
+                </li>
+                <li>О компании</li>
+                <li>Акции</li>
+                <li>Доставка и оплата</li>
+                <li>Сервисный центр</li>
+                <li>Статьи</li>
+                <li>Документация</li>
+                <li>Контакты</li>
+              </ul>
+            </div>
+            <div class="menu__socials">
+              <img src="./source/icons/tg-icon.svg" />
+              <img src="./source/icons/wa-icon.svg" />
+              <img src="./source/icons/mail-icon.svg" />
+              <!-- У кнопок будет задан параметр, который будет отвечать за формы -->
+              <button class="btn btn--default menu__call" data->
+                Заказать звонок
+              </button>
+            </div>
+            <div class="menu__panel--mobile">
+              <img src="./source/icons/like-icon-white.svg" />
+              <img src="./source/icons/cart-white-icon.svg" />
+              <img src="./source/icons/lk-icon-white.svg" />
+              <button
+                id="burger-button"
+                class="burger-button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+              >
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="menu__down">
+          <div class="menu__row container">
+            <div class="menu__info">
+              <div class="menu__region">Москва</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__schedule">Пн-пт: 9:00-18:00</div>
+              <!-- Здесь создадим зону включаемую зону из файла -->
+              <div class="menu__phone">8 (495) 287-70-10</div>
+            </div>
+            <div class="menu__control">
+              <div class="menu__search">
+                <input placeholder="Поиск товара по названию..." />
+              </div>
+              <div class="menu__panel">
+                <img src="./source/icons/like-icon.svg" />
+                <img src="./source/icons/cart-icon.svg" />
+                <img src="./source/icons/lk-icon.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <!-- Хлебные крошки -->
+        <div class="container">
+          <div class="breadcrumbs">
+            <a class="breadcrumbs--item" href="/">Главная</a>
+            <span class="breadcrumbs--separator">/</span>
+            <a class="breadcrumbs--item" href="/">Каталог</a>
+            <span class="breadcrumbs--separator">/</span>
+            <span>Датчики и контроллеры</span>
+          </div>
+        </div>
+
+        <section class="background-section">
+          <!-- Первый баннер -->
+          <div class="container">
+            <div class="first-banner--section">
+              <div class="section__info">
+                <div class="first-block__feacher">
+                  Velino - официальный дистрибьютор EMEC
+                </div>
+                <h1 class="title text-green section__title">
+                  Датчики и контроллеры для систем дозирования и дезинфекции
+                </h1>
+                <p class="section__subtitle">
+                  Профессиональные измерительные системы EMEC: pH, ОВП, хлор, проводимость, мутность, растворённый кислород. Локальное и удалённое управление через  Nimbus.
+                </p>
+                <div class="section__tags">
+                  <div class="section__tag">
+                    Контроль ключевых параметров <br> в реальном времени
+                  </div>
+                  <div class="section__tag">
+                    Автоматическое управление <br> дозированием
+                  </div>
+                  <div class="section__tag">
+                    Снижение расхода <br> реагентов
+                  </div>
+                  <div class="section__tag">
+                    Интеграция с облачной <br> системой Nimbus
+                  </div>
+                </div>
+                <div class="section__button section__button--flex">
+                  <button class="btn btn--big btn--red">Подобрать насос</button>
+                  <button class="btn btn--big btn--white">
+                    Получить консультацию
+                  </button>
+                </div>
+              </div>
+              <div class="section__picture">
+                <img src="./source/sensors.png" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Серии -->
+          <div class="container series-filter__container">
+            <div class="series-filter__header">
+              <h2 class="title title-triangle text-large text-white">
+                Каталог оборудования
+              </h2>
+              <span class="series-filter__founded">Найдено 8 товаров</span>
+            </div>
+            <div class="series-filter__section">
+              <div class="filter--block">
+                <div class="filter--block__header">
+                  <p class="filter--block__name">Фильтры</p>
+                  <a class="filter--block__reset" href="#">Сбросить все</a>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label">Тип оборудования</span>
+                  <div class="filter--input__select">
+                    <div class = "filter--select__body">
+                      <input
+                        class="filter--input__input"
+                        placeholder="Выбрать вариант..."
+                      />
+                      <div class = "filter--select__chars">
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Контроллеры</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Датчики/Зонды</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label">Серия/Модель</span>
+                  <div class="filter--input__select">
+                    <div class = "filter--select__body">
+                      <input
+                        class="filter--input__input"
+                        placeholder="Выбрать вариант..."
+                      />
+                      <div class = "filter--select__chars">
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>LDS PLUS</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>LDS</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>LD MULTICHANNEL PLUS</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>CENTURIO TOWER</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>MTOWER PLUS</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>JA / J DIGITAL / DIN</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>EPHMD</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>ERHS</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>ECL6</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>SCL2</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>ECDIND</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>ETORB2</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label">Рабочая среда</span>
+                  <div class="filter--input__select">
+                    <div class = "filter--select__body">
+                      <input
+                        class="filter--input__input"
+                        placeholder="Выбрать вариант..."
+                      />
+                      <div class = "filter--select__chars">
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Пресная вода</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Солёная вода</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Горячая/Холодная вода</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <div class="filter--input">
+                  <span class="filter--input__label">Измеряемый параметр</span>
+                  <div class="filter--input__select">
+                    <div class = "filter--select__body">
+                      <input
+                        class="filter--input__input"
+                        placeholder="Выбрать вариант..."
+                      />
+                      <div class = "filter--select__chars">
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>pH</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>ОВП (ORP)</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Хлор (свободный/общий)</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Бром</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Диоксид хлора</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Проводимость / Индуктивная проводимость</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Мутность</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Растворённый кислород</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Температура</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Перекись водорода</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Озон</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Надуксусная кислота</label>
+                        </div>
+                        <div class = "checkbox__container--filter">
+                          <input class = "filter--select__char" type = "checkbox" />
+                          <label>Хлориты</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="filter--input__button"></button>
+                  </div>
+                </div>
+                <button class="btn btn--big btn--white">Показать товары</button>
+              </div>
+              <div class="series__wrapper">
+                <div class = "series__scroll stage-3">
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker">Новинка</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker recomend">Рекомендуем</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker">Новинка</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker">Новинка</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker">Новинка</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker">Новинка</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker">Новинка</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+                <div class="series__block series__block--extended">
+                  <div class="sales__sticker">Новинка</div>
+                  <div class="series__picture">
+                    <img src="./source/equipment-3.png" />
+                  </div>
+                  <div class="series__info">
+                    <p class="series__type">Электромагнитный дозирующий</p>
+                    <div class="series__separator"></div>
+                    <p class="series__name">
+                      Дозирующий моторный насос PRIUS D
+                    </p>
+                    <p class="series__description">
+                      Многофункциональный перистальтический насос с ЖК-дисплеем,
+                      энкодером, удалённым управлением через Wi-Fi/Bluetooth.
+                    </p>
+                    <div class="series__chars">
+                      <div class="series__char">10</div>
+                      <div class="series__char">PVDF/PTFE</div>
+                    </div>
+                  </div>
+                  <div class = "series__footer">
+                    <p class = "series__price">Цена <br> по запросу</p>
+                    <a href = "#" class = "btn btn--green btn--more">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+        <!-- Информация -->
+          <div class="container">
+            <div class="info__blocks--section">
+              <h2 class="title title-triangle text-large text-green">
+                Платформа Nimbus — управление из любой точки
+                <p class="subtitle">
+                  Удалённый мониторинг и настройка через веб.<br>
+                  Подключите контроллер/датчик к платформе и получите:
+                </p>
+              </h2>
+              <div class="stage-4 info__blocks">
+                <div class="info__block--feacher">
+                  <div class="info__picture">
+                    <img src="./source/real-time.png" />
+                  </div>
+                  <p class="info__title">
+                    В реальном времени
+                  </p>
+                  <div class="info__description">
+                    <ul>
+                        <li>Визуализация параметров (pH, Cl₂, проводимость и др.)</li>
+                        <li>Статус насосов, датчиков, аварийных сигналов</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="info__block--feacher">
+                  <div class="info__picture">
+                    <img src="./source/alarm.png" />
+                  </div>
+                  <p class="info__title">
+                    Уведомления
+                  </p>
+                  <div class="info__description">
+                      <ul>
+                        <li>Мгновенные оповещения об авариях по Email/SMS</li>
+                        <li>Настройка пороговых значений для триггеров</li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="info__block--feacher">
+                  <div class="info__picture">
+                    <img src="./source/note.png" />
+                  </div>
+                  <p class="info__title">Отчётность</p>
+                  <div class="info__description">
+                    <ul>
+                        <li>Графики и диаграммы с экспортом в Excel/PDF</li>
+                        <li>Журнал событий для аудита и оптимизации</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="info__block--feacher">
+                  <div class="info__picture">
+                    <img src="./source/fault.png" />
+                  </div>
+                  <p class="info__title">Управление</p>
+                  <div class="info__description">
+                    <ul>
+                        <li>Дистанционная настройка уставок и режимов дозирования</li>
+                        <li>Обновление прошивок «по воздуху»</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class = "container">
+            <!-- Переименовать при переносе и сделать более полезным -->
+            <div class = "banner__photo">
+                <div class = "banner__section">
+                    <div class="banner-info">
+                        <p class="banner-info__title small-triangle red--title">
+                          Точность <br> и стабильность
+                        </p>
+                        <p class="banner-info__description">
+                          Датчики с автоматической температурной компенсацией, стабильный сигнал даже при низких концентрациях (хлор от 0.01 мг/л, проводимость от 0.1 µS). 
+                        </p>
+                    </div>
+                    <div class="banner-info">
+                        <p class="banner-info__title small-triangle red--title">
+                            Гибкая<br> интеграция
+                        </p>
+                        <p class="banner-info__description">
+                            Все контроллеры имеют выходы 4–20 мА, RS485/Modbus, совместимы с дозирующими насосами EMEC и сторонним оборудованием. 
+                        </p>
+                    </div>
+                    <div class="banner-info">
+                        <p class="banner-info__title small-triangle red--title">
+                            Удалённое<br> управление
+                        </p>
+                        <p class="banner-info__description">
+                            Подключение к платформе ERMES через Ethernet, GSM, WiFi или Modbus: мониторинг, настройка, уведомления об авариях из любой точки мира. 
+                        </p>
+                    </div>
+                    <div class="banner-info">
+                        <p class="banner-info__title small-triangle red--title">
+                            Надёжность<br> в агрессивных средах
+                        </p>
+                        <p class="banner-info__description">
+                            Корпуса из ПВДФ, эпоксидного состава, нержавеющей стали; мембранные ячейки SCL для ClO₂, O₃, H₂O₂, PAA. 
+                        </p>
+                    </div>
+                    <div class="banner-info">
+                        <p class="banner-info__title small-triangle red--title">
+                            Простота<br> обслуживания
+                        </p>
+                        <p class="banner-info__description">
+                            Самоочищающиеся датчики (SCL17/18, EPHSC), быстросъёмные держатели, меню калибровки с подсказками на дисплее. 
+                        </p>
+                    </div>
+                    <div class="banner-info">
+                        <p class="banner-info__title small-triangle red--title">
+                            Готовые решения<br> «под ключ»
+                        </p>
+                        <p class="banner-info__description">
+                            Предварительно собранные панели для бассейнов, градирен, питьевой воды — экономия времени на проектирование и монтаж. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Форма -->
+          <div class="container form-pd">
+            <div class="form-body__engineer form-v2">
+              <div class="form-engineer__body">
+                <div class="form-engineer__info">
+                  <h3 class="title text-large text-white">
+                    Подберём датчики и систему управления под вашу задачу
+                  </h3>
+                  <p class="form-engineer__subtitle">
+                    Оставьте заявку — мы предложим решение с учётом ваших требований и технологического процесса.
+                  </p>
+                </div>
+                <form class="form-problem__container">
+                  <input class="input--default" type="text" placeholder="Ваше фио" />
+                  <input
+                    class="input--default"
+                    name="phone"
+                    type="text"
+                    placeholder="+7 (___) ___-__-__"
+                  />
+                  <textarea
+                    class="input--default textarea--default"
+                    type="textarea"
+                    placeholder="ЗАДАЧА"
+                  ></textarea>
+                  <div class="checkbox-container--default">
+                    <input class="checkbox--default" type="checkbox" />
+                    <label
+                      >Я ознакомлен с политикой обработки персональных данных и
+                      даю согласие на обработку моих персональных данных</label
+                    >
+                  </div>
+                  <button class="btn btn--big btn--red">Отправить</button>
+                </form>
+              </div>
+              <div class="form-engineer__picture">
+                <img src="./source/enginer-1.png" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__body">
+            <div class="footer__info">
+              <img class="footer__logo" src="./source/logo.png" />
+              <div class="footer__phone">8 (495) 287-70-10</div>
+              <div class="footer__socials">
+                <img src="./source/icons/tg-icon.svg" />
+                <img src="./source/icons/wa-icon.svg" />
+                <img src="./source/icons/mail-icon.svg" />
+              </div>
+              <div class="footer__button">
+                <button class="btn btn--default footer__call" data->
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Каталог</li>
+                  <li>Акции</li>
+                  <li>Сервисный центр</li>
+                  <li>Доставка и оплата</li>
+                  <li>Гарантия и возврат</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>Новости</li>
+                  <li>Статьи</li>
+                  <li>Документация</li>
+                  <li>Партнеры</li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__separator"></div>
+                <ul>
+                  <li>О компании</li>
+                  <li>Вакансии</li>
+                  <li>Реквизиты</li>
+                  <li>Контакты</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__company">
+            <p>
+              ООО “Велино”,<br />
+              юридическая информация, юр адрес, ИНН, ОГРН, Лицензия,<br />
+              что-то еще такое, и вот такое, и БИК и Банк и что там еще надо.
+            </p>
+            <p>
+              © 2026 Velino. Все права защищены.<br />
+              Создание и продвижение сайта ООО “Маст”
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
